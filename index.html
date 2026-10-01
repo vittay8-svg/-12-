@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>แบบทดสอบก่อนเรียน-หลังเรียน เรื่อง ค่านิยมหลักของคนไทย 12 ประการ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@500;600;800&family=Sarabun:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+/* ============================= THEME / 3D STYLE ============================= */
+:root{
+  --ink:#141d3f; --ink2:#3a4a7a; --paper:#ffffff;
+  --c1:#e8590c; --c1d:#b14000;
+  --c2:#17b890; --c2d:#0d7d61;
+  --c3:#2f6fed; --c3d:#1b47a8;
+  --c4:#9b5cff; --c4d:#6a2fc0;
+  --ok:#17b890; --okd:#0d7d61;
+  --bad:#ef4b63; --badd:#b31f36;
+  --gold:#ffd23f; --goldd:#c79400;
+  --r:20px;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;padding:0}
+body{
+  font-family:'Sarabun','Kanit',system-ui,-apple-system,'Segoe UI',sans-serif;
+  color:var(--ink); min-height:100vh; padding:14px 12px 60px;
+  background:
+    radial-gradient(1100px 600px at 10% -10%, #ffd9a8 0%, transparent 58%),
+    radial-gradient(900px 560px at 95% 0%, #a8dcff 0%, transparent 55%),
+    radial-gradient(900px 700px at 50% 115%, #ffc9d4 0%, transparent 60%),
+    linear-gradient(170deg,#fff6ea 0%,#f1f6ff 55%,#eafff6 100%);
+  background-attachment:fixed;
+}
+h1,h2,h3,.ff{font-family:'Kanit','Sarabun',sans-serif;margin:0}
+.wrap{max-width:1040px;margin:0 auto}
+.screen{display:none;animation:pop .32s cubic-bezier(.22,1.3,.4,1)}
+.screen.on{display:block}
+@keyframes pop{from{opacity:0;transform:translateY(16px) scale(.97)}to{opacity:1;transform:none}}
+
+.card{
+  background:linear-gradient(180deg,#ffffff 0%,#f6f9ff 100%);
+  border:3px solid #fff; border-radius:var(--r);
+  box-shadow:0 10px 0 #d8d2c4, 0 20px 36px rgba(20,29,63,.2), inset 0 2px 0 #fff;
+  padding:18px; margin-bottom:16px;
+}
+.card.tight{padding:14px}
+
+.btn{
+  font-family:'Kanit','Sarabun',sans-serif;font-size:17px;font-weight:700;color:#fff;
+  border:none;border-radius:16px;padding:13px 22px;cursor:pointer;display:inline-flex;
+  align-items:center;gap:9px;justify-content:center;
+  background:linear-gradient(180deg,var(--c1) 0%,var(--c1d) 100%);
+  box-shadow:0 7px 0 var(--c1d), 0 13px 20px rgba(20,29,63,.28), inset 0 2px 0 rgba(255,255,255,.45);
+  transition:transform .1s ease, box-shadow .1s ease; margin:5px 5px 9px 0;
+}
+.btn:hover{filter:brightness(1.06)}
+.btn:active{transform:translateY(6px);box-shadow:0 1px 0 var(--c1d), 0 5px 10px rgba(20,29,63,.3)}
+.btn.g{background:linear-gradient(180deg,var(--c2),var(--c2d));box-shadow:0 7px 0 var(--c2d),0 13px 20px rgba(20,29,63,.28),inset 0 2px 0 rgba(255,255,255,.45)}
+.btn.g:active{box-shadow:0 1px 0 var(--c2d),0 5px 10px rgba(20,29,63,.3)}
+.btn.b{background:linear-gradient(180deg,var(--c3),var(--c3d));box-shadow:0 7px 0 var(--c3d),0 13px 20px rgba(20,29,63,.28),inset 0 2px 0 rgba(255,255,255,.45)}
+.btn.b:active{box-shadow:0 1px 0 var(--c3d),0 5px 10px rgba(20,29,63,.3)}
+.btn.p{background:linear-gradient(180deg,var(--c4),var(--c4d));box-shadow:0 7px 0 var(--c4d),0 13px 20px rgba(20,29,63,.28),inset 0 2px 0 rgba(255,255,255,.45)}
+.btn.p:active{box-shadow:0 1px 0 var(--c4d),0 5px 10px rgba(20,29,63,.3)}
+.btn.y{color:#5a3b00;background:linear-gradient(180deg,#ffe066,var(--goldd));box-shadow:0 7px 0 var(--goldd),0 13px 20px rgba(20,29,63,.28),inset 0 2px 0 rgba(255,255,255,.6)}
+.btn.y:active{box-shadow:0 1px 0 var(--goldd),0 5px 10px rgba(20,29,63,.3)}
+.btn.sm{font-size:14px;padding:9px 14px;border-radius:12px;box-shadow:0 5px 0 rgba(0,0,0,.25),0 8px 12px rgba(20,29,63,.2)}
+.btn.sm:active{transform:translateY(4px);box-shadow:0 1px 0 rgba(0,0,0,.25)}
+.btn.ghost{background:linear-gradient(180deg,#fff,#e9eefa);color:var(--ink);box-shadow:0 6px 0 #c3cde0,0 10px 16px rgba(20,29,63,.18)}
+.btn.ghost:active{box-shadow:0 1px 0 #c3cde0}
+.btn[disabled]{opacity:.5;cursor:not-allowed;transform:none!important}
+
+.hero{text-align:center;padding:26px 18px 22px;border-radius:26px;position:relative;overflow:hidden;
+  background:linear-gradient(145deg,#e8590c 0%,#c2255c 48%,#6a2fc0 120%);
+  box-shadow:0 14px 0 #7a1f3d, 0 26px 44px rgba(20,29,63,.35);margin-bottom:18px;color:#fff}
+.hero h1{font-size:clamp(23px,5vw,40px);text-shadow:0 4px 0 rgba(0,0,0,.28),0 10px 18px rgba(0,0,0,.3);letter-spacing:.4px}
+.hero p{margin:9px 0 0;font-size:16px;opacity:.95}
+.hero .deco{position:absolute;inset:0;pointer-events:none;opacity:.18}
+.chipline{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:14px}
+.chip{background:rgba(255,255,255,.22);border:2px solid rgba(255,255,255,.5);padding:6px 13px;border-radius:999px;font-weight:700;font-size:14px;backdrop-filter:blur(3px)}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(275px,1fr));gap:15px}
+.pick{cursor:pointer;text-align:left;border-radius:22px;padding:20px;color:#fff;border:3px solid rgba(255,255,255,.75);
+  transition:transform .12s;position:relative;overflow:hidden}
+.pick:active{transform:translateY(6px)}
+.pick h3{font-size:22px;margin-bottom:5px}
+.pick small{font-size:14px;opacity:.95;display:block;line-height:1.55}
+.pick .big{position:absolute;right:10px;bottom:-12px;font-size:76px;opacity:.22}
+.pick.pre{background:linear-gradient(160deg,#2f6fed,#1b47a8);box-shadow:0 10px 0 #122f74,0 20px 30px rgba(20,29,63,.3)}
+.pick.post{background:linear-gradient(160deg,#17b890,#0d7d61);box-shadow:0 10px 0 #0a5b47,0 20px 30px rgba(20,29,63,.3)}
+.pick.prac{background:linear-gradient(160deg,#ff8c1a,#c25d00);box-shadow:0 10px 0 #8e4400,0 20px 30px rgba(20,29,63,.3)}
+.pick.wk{background:linear-gradient(160deg,#9b5cff,#6a2fc0);box-shadow:0 10px 0 #4e1f93,0 20px 30px rgba(20,29,63,.3)}
+label.f{display:block;font-weight:700;margin:0 0 5px;font-size:15px}
+input.f,select.f{width:100%;font-family:inherit;font-size:16px;padding:11px 13px;border-radius:13px;border:3px solid #d8ddea;background:#fff;color:var(--ink);box-shadow:inset 0 3px 7px rgba(20,29,63,.09)}
+input.f:focus,select.f:focus{outline:none;border-color:var(--c1);box-shadow:0 0 0 4px rgba(232,89,12,.18)}
+.rowN{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:11px}
+.switch{display:flex;align-items:center;gap:11px;background:#fff7e3;border:3px solid #ffe6a8;border-radius:16px;padding:11px 14px;margin-top:13px}
+.tgl{width:60px;height:32px;border-radius:999px;background:#ccd4e4;position:relative;cursor:pointer;flex:none;box-shadow:inset 0 3px 7px rgba(0,0,0,.2)}
+.tgl i{position:absolute;top:3px;left:3px;width:26px;height:26px;border-radius:50%;background:#fff;box-shadow:0 3px 6px rgba(0,0,0,.3);transition:.18s}
+.tgl.on{background:linear-gradient(180deg,#17b890,#0d7d61)}
+.tgl.on i{left:31px}
+
+.hud{display:flex;flex-wrap:wrap;align-items:center;gap:10px;justify-content:space-between;
+  background:linear-gradient(180deg,#ffffff,#f1f4fd);border:3px solid #fff;border-radius:18px;padding:11px 14px;
+  box-shadow:0 8px 0 #d3d8e6,0 16px 26px rgba(20,29,63,.2);margin-bottom:14px}
+.hearts{font-size:23px;letter-spacing:2px;filter:drop-shadow(0 3px 2px rgba(0,0,0,.25))}
+.heart.off{filter:grayscale(1);opacity:.32}
+.pill{background:linear-gradient(180deg,#fff,#eaf0fd);border:2px solid #d5deef;border-radius:999px;padding:5px 13px;font-weight:800;font-size:15px;box-shadow:0 3px 0 #d3d8e6}
+.bar{height:16px;border-radius:999px;background:#dde3f0;overflow:hidden;box-shadow:inset 0 3px 6px rgba(20,29,63,.2);margin-top:9px}
+.bar>i{display:block;height:100%;border-radius:999px;transition:width .35s cubic-bezier(.3,1.4,.5,1);
+  background:linear-gradient(90deg,#e8590c,#f0b429 50%,#17b890);box-shadow:0 0 12px rgba(232,89,12,.5)}
+.lvtag{display:inline-flex;align-items:center;gap:8px;color:#fff;font-weight:800;font-size:14px;padding:7px 15px;border-radius:999px;
+  box-shadow:0 5px 0 rgba(0,0,0,.26),0 10px 16px rgba(20,29,63,.22);margin-bottom:11px}
+.story{background:linear-gradient(180deg,#fffbe9,#fff1c4);border:3px dashed #efb834;border-radius:16px;padding:13px 15px;margin-bottom:12px;font-size:16.5px;line-height:1.75}
+.qtext{font-family:'Kanit','Sarabun',sans-serif;font-size:clamp(18px,2.8vw,23px);font-weight:600;line-height:1.7;margin:4px 0 12px}
+.figbox{text-align:center;margin:6px 0 14px}
+svg.fig{width:100%;max-width:420px;height:auto;background:#fff;border:3px solid #e6eaf6;border-radius:16px;padding:6px;box-shadow:0 6px 0 #dbe0ee}
+.choices{display:grid;gap:11px}
+.ch{display:flex;align-items:center;gap:13px;text-align:left;font-family:inherit;font-size:17px;font-weight:600;color:var(--ink);
+  background:linear-gradient(180deg,#fff,#f0f4ff);border:3px solid #e0e6f7;border-radius:17px;padding:13px 15px;cursor:pointer;
+  box-shadow:0 7px 0 #d3d8e6,0 12px 18px rgba(20,29,63,.14);transition:transform .1s,box-shadow .1s;line-height:1.6}
+.ch:hover{border-color:var(--c1)}
+.ch:active{transform:translateY(5px);box-shadow:0 2px 0 #d3d8e6}
+.ch .k{flex:none;width:40px;height:40px;border-radius:12px;display:grid;place-items:center;color:#fff;font-weight:800;font-size:19px;
+  background:linear-gradient(180deg,#ffa94d,#e8590c);box-shadow:0 4px 0 #b14000, inset 0 2px 0 rgba(255,255,255,.4)}
+.ch.right{background:linear-gradient(180deg,#d9fff2,#a9f3dd);border-color:var(--ok);box-shadow:0 7px 0 var(--okd)}
+.ch.right .k{background:linear-gradient(180deg,#45e0b4,var(--okd));box-shadow:0 4px 0 var(--okd)}
+.ch.wrong{background:linear-gradient(180deg,#ffe2e7,#ffc6cf);border-color:var(--bad);box-shadow:0 7px 0 var(--badd)}
+.ch.wrong .k{background:linear-gradient(180deg,#ff7a8e,var(--badd));box-shadow:0 4px 0 var(--badd)}
+.ch[disabled]{cursor:default}
+.typebox{display:flex;gap:10px;flex-wrap:wrap;align-items:center;background:linear-gradient(180deg,#f2ecff,#e4d8ff);
+  border:3px solid #c9b2ff;border-radius:17px;padding:13px}
+.typebox input{flex:1;min-width:170px;font-size:20px;font-weight:800;text-align:center;padding:11px;border-radius:13px;border:3px solid #b79aff;font-family:inherit;color:var(--ink)}
+.fb{margin-top:13px;border-radius:17px;padding:14px 16px;font-size:16.5px;line-height:1.75;border:3px solid;animation:pop .25s}
+.fb.ok{background:linear-gradient(180deg,#e7fff7,#c7f6e8);border-color:var(--ok)}
+.fb.no{background:linear-gradient(180deg,#fff0f2,#ffd9df);border-color:var(--bad)}
+.fb b{font-family:'Kanit',sans-serif;font-size:18px;display:block;margin-bottom:5px}
+.hintbox{margin-top:11px;background:linear-gradient(180deg,#fffbe6,#fff0bd);border:3px dashed #e8b53c;border-radius:15px;padding:12px 14px;font-size:16px;line-height:1.75}
+.mask{position:fixed;inset:0;background:rgba(10,14,35,.6);display:none;place-items:center;z-index:60;padding:16px;backdrop-filter:blur(3px)}
+.mask.on{display:grid}
+.modal{background:linear-gradient(180deg,#fff,#f1f5ff);border:4px solid #fff;border-radius:24px;padding:24px;max-width:430px;width:100%;text-align:center;
+  box-shadow:0 14px 0 #c0c8da,0 28px 50px rgba(0,0,0,.4);animation:pop .3s}
+
+.scorebig{font-family:'Kanit',sans-serif;font-size:clamp(46px,12vw,86px);font-weight:800;line-height:1;
+  background:linear-gradient(180deg,#ffe066,#ff8c1a 60%,#e2572b);-webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 5px 0 rgba(0,0,0,.18))}
+table{width:100%;border-collapse:collapse;font-size:15px;background:#fff;border-radius:14px;overflow:hidden}
+th,td{border:1px solid #e0e6f2;padding:8px 9px;text-align:center;vertical-align:middle}
+th{background:linear-gradient(180deg,#e8590c,#b14000);color:#fff;font-family:'Kanit',sans-serif;font-weight:600}
+tr:nth-child(even) td{background:#fcf8f4}
+td.l,th.l{text-align:left}
+.tw{overflow-x:auto;border-radius:14px;box-shadow:0 6px 0 #ddd8cc}
+.sb{height:26px;border-radius:999px;background:#e6e9f3;overflow:hidden;box-shadow:inset 0 3px 6px rgba(0,0,0,.14)}
+.sb>i{display:block;height:100%;color:#fff;font-size:13px;font-weight:800;text-align:right;padding-right:9px;line-height:26px;border-radius:999px}
+.badge{display:inline-block;padding:3px 11px;border-radius:999px;font-weight:800;font-size:13px;color:#fff}
+.rv{border-left:8px solid;border-radius:13px;padding:11px 13px;margin-bottom:9px;background:#fff;box-shadow:0 4px 0 #e3e7f1;font-size:15.5px;line-height:1.7}
+.rv.k{border-color:var(--ok)}.rv.x{border-color:var(--bad)}
+.note{font-size:14px;color:var(--ink2)}
+.sec{font-family:'Kanit',sans-serif;font-size:20px;margin:4px 0 11px;display:flex;align-items:center;gap:9px}
+.vlist{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:10px}
+.vrow{display:flex;gap:11px;align-items:flex-start;background:#fff;border-radius:14px;padding:11px 13px;box-shadow:0 5px 0 #e3e7f1;font-size:15.5px;line-height:1.65}
+.vnum{flex:none;width:36px;height:36px;border-radius:50%;color:#fff;font-weight:800;display:grid;place-items:center;font-size:17px;box-shadow:0 4px 0 rgba(0,0,0,.2),inset 0 2px 0 rgba(255,255,255,.35)}
+
+#sheetWrap{display:none}
+#sheetWrap.on{display:block}
+.sheet{background:#fff;color:#000;max-width:820px;margin:0 auto 18px;padding:34px 38px;border-radius:8px;
+  box-shadow:0 10px 30px rgba(0,0,0,.25);font-family:'Sarabun',serif;font-size:15.5px;line-height:1.75}
+.sheet h2{text-align:center;font-size:21px;margin-bottom:3px}
+.sheet .sub{text-align:center;font-size:15px;margin-bottom:12px}
+.sheet .idbox{border:1.5px solid #000;border-radius:6px;padding:9px 12px;margin-bottom:12px;font-size:14.5px}
+.sheet ol.items{padding-left:22px;margin:0}
+.sheet ol.items>li{margin-bottom:11px;break-inside:avoid;page-break-inside:avoid}
+.sheet .ops{margin-top:3px;font-size:14.8px}
+.sheet .ops div{margin:1px 0}
+.sheet .st{font-style:italic;background:#f2f2f2;padding:5px 9px;border-left:3px solid #666;margin:4px 0}
+.sheet svg.fig{max-width:340px;border:1px solid #999;box-shadow:none;padding:2px}
+.sheet table{font-size:13.5px}
+.sheet th{background:#ddd!important;color:#000!important}
+.pagebreak{break-before:page;page-break-before:always}
+.ansgrid{display:grid;grid-template-columns:repeat(5,1fr);gap:4px;font-size:13.5px}
+.ansgrid div{border:1px solid #000;padding:3px 5px}
+@media print{
+  body *{visibility:hidden}
+  #sheetWrap,#sheetWrap *{visibility:visible}
+  #sheetWrap{position:absolute;left:0;top:0;width:100%}
+  .sheet{box-shadow:none;margin:0;padding:12mm 10mm;max-width:100%;border-radius:0}
+  .noprint{display:none!important}
+  @page{size:A4;margin:10mm}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<!-- ============================ HOME ============================ -->
+<section id="scr-home" class="screen on">
+  <div class="hero">
+    <div class="deco">
+      <svg viewBox="0 0 800 200" style="width:100%;height:100%">
+        <circle cx="90" cy="100" r="46" fill="#fff"/><circle cx="200" cy="70" r="26" fill="#fff"/>
+        <circle cx="650" cy="110" r="52" fill="#fff"/><circle cx="740" cy="55" r="24" fill="#fff"/>
+        <rect x="330" y="150" width="140" height="18" rx="9" fill="#fff"/>
+      </svg>
+    </div>
+    <h1>ค่านิยมหลักของคนไทย 12 ประการ</h1>
+    <p>แบบทดสอบก่อนเรียน - หลังเรียน (คู่ขนาน) สำหรับชั้นมัธยมศึกษาตอนต้น</p>
+    <div class="chipline">
+      <span class="chip">รู้จักค่านิยม 12 ข้อ</span>
+      <span class="chip">คุณสมบัติของผู้มีค่านิยม</span>
+      <span class="chip">จำแนกพฤติกรรม</span>
+      <span class="chip">นำไปใช้ในชีวิตประจำวัน</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="sec">ข้อมูลผู้เรียน <span class="note">(ใช้สำหรับหน้าสรุปของครู)</span></div>
+    <div class="rowN">
+      <div><label class="f" for="inName">ชื่อ-สกุล</label><input class="f" id="inName" placeholder="เช่น ด.ญ. ปริยา ใจดี"></div>
+      <div><label class="f" for="inRoom">ชั้น/ห้อง</label><input class="f" id="inRoom" placeholder="เช่น ม.2/3"></div>
+      <div><label class="f" for="inNo">เลขที่</label><input class="f" id="inNo" placeholder="เช่น 12" inputmode="numeric"></div>
+    </div>
+    <div class="switch">
+      <div class="tgl" id="tglType" onclick="toggleType()"><i></i></div>
+      <div><b>โหมดพิมพ์คำตอบเอง (สำหรับผู้เรียนที่พร้อม)</b>
+        <div class="note">ตอบถูกได้คะแนนโบนัส +3 ต่อข้อ และสลับกลับไปใช้ตัวเลือกได้ทุกเมื่อ</div></div>
+    </div>
+  </div>
+
+  <div class="grid2">
+    <div class="card pick pre" onclick="startTest('pre')">
+      <span class="big">1</span><h3>แบบทดสอบก่อนเรียน</h3>
+      <small>25 ข้อ · 4 ด่าน · หัวใจ 5 ดวง<br>วัดความรู้และเจตคติพื้นฐานก่อนเริ่มบทเรียน</small>
+    </div>
+    <div class="card pick post" onclick="startTest('post')">
+      <span class="big">2</span><h3>แบบทดสอบหลังเรียน</h3>
+      <small>25 ข้อ คู่ขนานกับชุดก่อนเรียนทุกข้อ<br>วัดความก้าวหน้าหลังจบบทเรียน</small>
+    </div>
+    <div class="card pick prac" onclick="startTest('practice')">
+      <span class="big">3</span><h3>โหมดฝึกซ้อม</h3>
+      <small>สุ่มข้อจากคลังทั้งหมด มีคำใบ้และเฉลยทันที<br>ไม่บันทึกคะแนนลงรายงานของครู</small>
+    </div>
+    <div class="card pick wk" onclick="openWorksheet()">
+      <span class="big">4</span><h3>ใบงาน / PDF สำหรับพิมพ์</h3>
+      <small>ใบข้อสอบ + กระดาษคำตอบ + ใบความรู้ + เฉลย<br>สั่งพิมพ์หรือบันทึกเป็น PDF ได้ทันที</small>
+    </div>
+  </div>
+
+  <div class="card tight" style="text-align:center">
+    <button class="btn ghost" onclick="openTeacher()">หน้าสรุปคะแนนสำหรับครู</button>
+    <button class="btn ghost" onclick="openGuide()">ใบความรู้ ค่านิยม 12 ประการ</button>
+  </div>
+  <p class="note" style="text-align:center">ผลการทดสอบถูกบันทึกไว้ในเครื่องนี้เท่านั้น (localStorage) ไม่มีการส่งข้อมูลออกภายนอก</p>
+</section>
+
+<!-- ============================ GUIDE ============================ -->
+<section id="scr-guide" class="screen">
+  <div class="card">
+    <div class="sec">ใบความรู้ : ค่านิยมหลักของคนไทย 12 ประการ</div>
+    <p style="font-size:16px;line-height:1.8">ค่านิยมหลักของคนไทย 12 ประการ เป็นแนวทางการปลูกฝังคุณธรรม จริยธรรม และคุณลักษณะอันพึงประสงค์ให้แก่เด็กและเยาวชนไทย เพื่อให้เป็นคนดี มีวินัย ภูมิใจในชาติ และอยู่ร่วมกับผู้อื่นในสังคมได้อย่างมีความสุข</p>
+    <div class="vlist" id="guideList"></div>
+    <div class="hintbox" style="margin-top:14px">
+      <b>สัญลักษณ์ที่ใช้ในแบบทดสอบ</b><br>
+      หัวใจ = จำนวนครั้งที่ตอบผิดได้ · ดาว = คะแนนสะสม · หลอดไฟ = คำใบ้ · เครื่องหมายถูก = ตอบถูก · เครื่องหมายกากบาท = ตอบผิด<br>
+      เกณฑ์การผ่าน : ตอบถูกตั้งแต่ 60% ขึ้นไป (15 จาก 25 ข้อ)
+    </div>
+    <button class="btn" onclick="show('scr-home')">กลับหน้าแรก</button>
+  </div>
+</section>
+
+<!-- ============================ QUIZ ============================ -->
+<section id="scr-quiz" class="screen">
+  <div class="hud">
+    <div><span class="hearts" id="hud-hearts"></span></div>
+    <div><span class="pill" id="hud-q">ข้อ 1/25</span></div>
+    <div><span class="pill">คะแนน <span id="hud-score">0</span></span></div>
+    <div><span class="pill">เวลา <span id="hud-time">00:00</span></span></div>
+    <div><button class="btn sm ghost" onclick="quitQuiz()">ออก</button></div>
+  </div>
+  <div class="bar"><i id="hud-bar" style="width:0%"></i></div>
+
+  <div class="card" style="margin-top:14px">
+    <span class="lvtag" id="q-lv"></span>
+    <div id="q-story"></div>
+    <div class="qtext" id="q-text"></div>
+    <div class="figbox" id="q-fig"></div>
+    <div id="q-area"></div>
+    <div id="q-hint"></div>
+    <div id="q-fb"></div>
+    <div style="margin-top:14px;display:flex;flex-wrap:wrap;gap:6px">
+      <button class="btn y sm" id="btnHint" onclick="useHint()">ขอคำใบ้</button>
+      <button class="btn p sm" id="btnMode" onclick="switchMode()">พิมพ์คำตอบเอง</button>
+      <button class="btn g" id="btnNext" style="margin-left:auto;display:none" onclick="nextQ()">ข้อถัดไป</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ RESULT ============================ -->
+<section id="scr-result" class="screen"><div id="resBody"></div></section>
+
+<!-- ============================ TEACHER ============================ -->
+<section id="scr-teacher" class="screen"><div id="tcBody"></div></section>
+
+<!-- ============================ WORKSHEET ============================ -->
+<section id="scr-print" class="screen">
+  <div class="card noprint">
+    <div class="sec">โหมดใบงาน / บันทึกเป็น PDF</div>
+    <div class="rowN">
+      <div><label class="f">เลือกชุดข้อสอบ</label>
+        <select class="f" id="wkSet"><option value="pre">แบบทดสอบก่อนเรียน (25 ข้อ)</option><option value="post">แบบทดสอบหลังเรียน (25 ข้อ)</option></select></div>
+      <div><label class="f">เฉลยสำหรับครู</label>
+        <select class="f" id="wkKey"><option value="1">แนบเฉลย + คำอธิบาย</option><option value="0">ไม่แนบเฉลย (ใบนักเรียน)</option></select></div>
+      <div><label class="f">รูปประกอบ</label>
+        <select class="f" id="wkFig"><option value="1">แสดงรูปประกอบ</option><option value="0">ซ่อนรูป (ประหยัดหมึก)</option></select></div>
+      <div><label class="f">ใบความรู้</label>
+        <select class="f" id="wkRef"><option value="1">แนบใบความรู้ค่านิยม 12 ประการ</option><option value="0">ไม่แนบใบความรู้</option></select></div>
+    </div>
+    <div style="margin-top:12px">
+      <button class="btn p" onclick="buildSheet()">สร้าง / อัปเดตใบงาน</button>
+      <button class="btn" onclick="window.print()">พิมพ์ / บันทึกเป็น PDF</button>
+      <button class="btn ghost" onclick="show('scr-home')">กลับหน้าแรก</button>
+    </div>
+    <p class="note" style="margin-bottom:0">วิธีบันทึกเป็น PDF : กดปุ่มพิมพ์ แล้วที่ช่องเครื่องพิมพ์ (Destination) เลือก Save as PDF จากนั้นกด Save</p>
+  </div>
+  <div id="sheetWrap" class="on"></div>
+</section>
+
+</div>
+
+<div class="mask" id="mask"><div class="modal" id="modalBody"></div></div>
+
+<script>
+/* =================================================================================
+   ส่วนที่ 1 : CONFIG — ปรับความยากง่ายได้ที่นี่จุดเดียว
+   ================================================================================= */
+const CONFIG = {
+  hearts: 5,                                  // จำนวนหัวใจเริ่มต้น
+  refillHearts: 3,                            // เติมหัวใจครั้งละกี่ดวงเมื่อหมด
+  questionCount: {1:10, 2:5, 3:5, 4:5},       // จำนวนข้อที่ออกสอบต่อด่าน (รวม 25 ข้อ)
+  pointsCorrect: 10,                          // คะแนนต่อข้อที่ตอบถูก
+  pointsTypedBonus: 3,                        // โบนัสเมื่อตอบถูกในโหมดพิมพ์เอง
+  hintPenalty: 3,                             // หักคะแนนเมื่อใช้คำใบ้ (ยังนับว่าตอบถูก)
+  passPercent: 60,                            // เกณฑ์ผ่าน (%)
+  shuffleQuestions: false,                    // true = สลับลำดับข้อภายในด่าน
+  shuffleChoices: false,                      // true = สลับตัวเลือก
+  typedModeDefault: false                     // ค่าเริ่มต้นของโหมดพิมพ์คำตอบเอง
+};
+
+const LEVELS = [
+  {id:1, name:'รู้จักค่านิยมหลักของคนไทย 12 ประการ', c:'#e8590c', d:'#b14000'},
+  {id:2, name:'คุณสมบัติของผู้ที่มีค่านิยม 12 ประการ', c:'#17b890', d:'#0d7d61'},
+  {id:3, name:'จำแนกพฤติกรรมให้ตรงกับค่านิยม', c:'#2f6fed', d:'#1b47a8'},
+  {id:4, name:'การนำค่านิยมไปใช้ในชีวิตประจำวัน', c:'#9b5cff', d:'#6a2fc0'}
+];
+
+/* รายการค่านิยมหลัก 12 ประการ : n = ข้อที่ / k = ชื่อย่อ / t = ข้อความเต็ม / c = สี */
+const VALUES = [
+ {n:1,  k:'รักชาติ',        t:'มีความรักชาติ ศาสนา พระมหากษัตริย์', c:'#e03131'},
+ {n:2,  k:'ซื่อสัตย์',       t:'ซื่อสัตย์ เสียสละ อดทน มีอุดมการณ์ในสิ่งที่ดีงามเพื่อส่วนรวม', c:'#f08c00'},
+ {n:3,  k:'กตัญญู',         t:'กตัญญูต่อพ่อแม่ ผู้ปกครอง ครูบาอาจารย์', c:'#e8590c'},
+ {n:4,  k:'ใฝ่หาความรู้',    t:'ใฝ่หาความรู้ หมั่นศึกษาเล่าเรียนทั้งทางตรงและทางอ้อม', c:'#2f6fed'},
+ {n:5,  k:'วัฒนธรรมไทย',   t:'รักษาวัฒนธรรมประเพณีไทยอันงดงาม', c:'#9b5cff'},
+ {n:6,  k:'มีศีลธรรม',      t:'มีศีลธรรม รักษาความสัตย์ หวังดีต่อผู้อื่น เผื่อแผ่และแบ่งปัน', c:'#17b890'},
+ {n:7,  k:'ประชาธิปไตย',   t:'เข้าใจเรียนรู้การเป็นประชาธิปไตยอันมีพระมหากษัตริย์ทรงเป็นประมุขที่ถูกต้อง', c:'#0ca678'},
+ {n:8,  k:'มีวินัย',        t:'มีระเบียบวินัย เคารพกฎหมาย ผู้น้อยรู้จักการเคารพผู้ใหญ่', c:'#1b47a8'},
+ {n:9,  k:'มีสติ',          t:'มีสติรู้ตัว รู้คิด รู้ทำ รู้ปฏิบัติ ตามพระราชดำรัสของพระบาทสมเด็จพระเจ้าอยู่หัว', c:'#c2255c'},
+ {n:10, k:'พอเพียง',       t:'รู้จักดำรงตนอยู่โดยใช้หลักปรัชญาของเศรษฐกิจพอเพียง รู้จักอดออมไว้ใช้เมื่อยามจำเป็น มีไว้พอกินพอใช้ ถ้าเหลือก็แจกจ่ายจำหน่าย และพร้อมที่จะขยายกิจการเมื่อมีความพร้อม เมื่อมีภูมิคุ้มกันที่ดี', c:'#2b8a3e'},
+ {n:11, k:'เข้มแข็ง',       t:'มีความเข้มแข็งทั้งร่างกายและจิตใจ ไม่ยอมแพ้ต่ออำนาจฝ่ายต่ำหรือกิเลส มีความละอายเกรงกลัวต่อบาปตามหลักของศาสนา', c:'#7048e8'},
+ {n:12, k:'เห็นส่วนรวม',    t:'คำนึงถึงผลประโยชน์ของส่วนรวมและของชาติมากกว่าผลประโยชน์ของตนเอง', c:'#1098ad'}
+];
+
+/* =================================================================================
+   ส่วนที่ 2 : FIG — ตัวช่วยวาดภาพประกอบ (ใส่ในฟิลด์ fig ของโจทย์ จะใส่หรือไม่ก็ได้)
+      FIG.ruler()            แถบสรุปค่านิยมทั้ง 12 ข้อ (ใช้เป็นแผนผังช่วยคิด)
+      FIG.badge(3)           เหรียญค่านิยมข้อที่ 3
+      FIG.piggy(900, 30)     ภาพกระปุกออมสิน เป้าหมาย 900 บาท ออมวันละ 30 บาท
+   ================================================================================= */
+const FIG = {
+  _t(x,y,s,anchor,size,col,weight){
+    return '<text x="'+x+'" y="'+y+'" text-anchor="'+(anchor||'middle')+
+      '" font-family="Sarabun,sans-serif" font-size="'+(size||14)+'" font-weight="'+(weight||700)+
+      '" fill="'+(col||'#141d3f')+'">'+s+'</text>';
+  },
+  ruler(){
+    let g='';
+    VALUES.forEach((v,i)=>{
+      const c=i%3, r=Math.floor(i/3), x=6+c*124, y=6+r*38;
+      g+='<rect x="'+x+'" y="'+y+'" width="118" height="32" rx="10" fill="'+v.c+'1a" stroke="'+v.c+'" stroke-width="2"/>';
+      g+='<circle cx="'+(x+17)+'" cy="'+(y+16)+'" r="11" fill="'+v.c+'"/>';
+      g+=this._t(x+17,y+21,String(v.n),'middle',12,'#fff',800);
+      g+=this._t(x+33,y+21,v.k,'start',11.5,'#141d3f',700);
+    });
+    return '<svg class="fig" viewBox="0 0 380 158" xmlns="http://www.w3.org/2000/svg">'+g+'</svg>';
+  },
+  badge(n){
+    const v=VALUES[n-1]; let g='';
+    g+='<ellipse cx="62" cy="106" rx="44" ry="8" fill="#00000022"/>';
+    g+='<circle cx="62" cy="58" r="44" fill="'+v.c+'"/>';
+    g+='<circle cx="62" cy="48" r="33" fill="#ffffff" opacity="0.2"/>';
+    g+='<circle cx="62" cy="58" r="44" fill="none" stroke="#ffffff" stroke-width="4" opacity="0.65"/>';
+    g+=this._t(62,72,String(v.n),'middle',38,'#fff',800);
+    g+=this._t(122,48,'ค่านิยมข้อที่ '+v.n,'start',14,'#555',600);
+    g+=this._t(122,78,v.k,'start',20,v.c,800);
+    return '<svg class="fig" viewBox="0 0 380 120" xmlns="http://www.w3.org/2000/svg">'+g+'</svg>';
+  },
+  piggy(goal, per){
+    let g='';
+    g+='<ellipse cx="108" cy="140" rx="70" ry="9" fill="#00000018"/>';
+    g+='<rect x="66" y="112" width="16" height="22" rx="5" fill="#d6336c"/>';
+    g+='<rect x="128" y="112" width="16" height="22" rx="5" fill="#d6336c"/>';
+    g+='<ellipse cx="106" cy="84" rx="62" ry="45" fill="#f783ac" stroke="#c2255c" stroke-width="3"/>';
+    g+='<polygon points="78,44 104,36 92,62" fill="#f06595" stroke="#c2255c" stroke-width="3" stroke-linejoin="round"/>';
+    g+='<ellipse cx="160" cy="88" rx="17" ry="14" fill="#f06595" stroke="#c2255c" stroke-width="3"/>';
+    g+='<circle cx="156" cy="86" r="2.6" fill="#7a1230"/><circle cx="166" cy="86" r="2.6" fill="#7a1230"/>';
+    g+='<circle cx="132" cy="72" r="4" fill="#7a1230"/>';
+    g+='<rect x="92" y="46" width="34" height="7" rx="3.5" fill="#7a1230"/>';
+    g+='<circle cx="109" cy="22" r="15" fill="#ffd43b" stroke="#c79400" stroke-width="3"/>';
+    g+=this._t(109,28,'B','middle',16,'#7a5200',800);
+    g+=this._t(196,56,'เป้าหมาย '+goal+' บาท','start',16,'#141d3f',800);
+    g+=this._t(196,84,'ออมวันละ '+per+' บาท','start',16,'#2b8a3e',800);
+    g+=this._t(196,112,'ต้องออมกี่วัน ?','start',16,'#c2255c',800);
+    return '<svg class="fig" viewBox="0 0 380 155" xmlns="http://www.w3.org/2000/svg">'+g+'</svg>';
+  }
+};
+
+/* =================================================================================
+   ส่วนที่ 3 : คลังข้อสอบ — แก้ไข / เพิ่มโจทย์ได้ที่นี่
+   ---------------------------------------------------------------------------------
+   รูปแบบของแต่ละข้อ (ฟิลด์ที่มี * จำเป็นต้องมี)
+   {
+     story : 'สถานการณ์หรือบทนำ',     // ไม่ใส่ก็ได้
+     q     : 'คำถาม',                 // *
+     fig   : FIG.ruler(),             // ภาพประกอบ ไม่ใส่ก็ได้
+     choices: ['ก','ข','ค','ง'],      // * ใส่ 2-5 ตัวเลือกก็ได้
+     answer: 0,                       // * ตำแหน่งคำตอบที่ถูก เริ่มนับที่ 0
+     ans   : ['4','ข้อ 4'],           // คำตอบที่ยอมรับในโหมดพิมพ์เอง (ถ้าไม่ใส่ ข้อนั้นจะไม่มีโหมดพิมพ์)
+     hint  : 'คำใบ้',                 // *
+     why   : 'คำอธิบายเฉลย'           // *
+   }
+   เพิ่มข้อใหม่ = คัดลอกบล็อก { ... } วางต่อท้าย array แล้วอย่าลืมใส่เครื่องหมาย ,
+   จำนวนข้อที่ออกสอบต่อด่าน ปรับที่ CONFIG.questionCount ด้านบน
+   ================================================================================= */
+
+/* ---------- ด่าน 1 : รู้จักค่านิยมหลักของคนไทย 12 ประการ ---------- */
+const level1Data = {
+pre:[
+ {q:'ค่านิยมหลักของคนไทย 12 ประการ มีจุดมุ่งหมายสำคัญตรงกับข้อใด',
+  fig:FIG.ruler(),
+  choices:['เพื่อปลูกฝังให้คนไทยเป็นคนดี มีคุณธรรม และอยู่ร่วมกันในสังคมอย่างสงบสุข','เพื่อใช้เป็นกฎหมายลงโทษผู้ที่ประพฤติไม่เหมาะสม','เพื่อคัดเลือกบุคคลเข้าทำงานในหน่วยงานของรัฐ','เพื่อใช้วัดระดับสติปัญญาของนักเรียน'],
+  answer:0, hint:'ค่านิยมเป็นสิ่งที่ปลูกฝังในจิตใจและการปฏิบัติ ไม่ใช่บทลงโทษหรือเครื่องมือวัดสติปัญญา',
+  why:'ค่านิยมหลัก 12 ประการ มุ่งปลูกฝังคุณธรรม จริยธรรม และคุณลักษณะอันพึงประสงค์ให้เด็กและเยาวชนไทยเป็นคนดี มีวินัย ภูมิใจในชาติ และอยู่ร่วมกับผู้อื่นได้อย่างมีความสุข'},
+ {q:'ข้อความว่า “ใฝ่หาความรู้ หมั่นศึกษาเล่าเรียนทั้งทางตรงและทางอ้อม” เป็นค่านิยมข้อที่เท่าใด',
+  choices:['ข้อที่ 2','ข้อที่ 3','ข้อที่ 4','ข้อที่ 5'], answer:2, ans:['4','ข้อ 4','ข้อที่ 4'],
+  hint:'เรียงลำดับ 1 รักชาติ · 2 ซื่อสัตย์ · 3 กตัญญู · 4 ...',
+  why:'ค่านิยมข้อที่ 4 คือ ใฝ่หาความรู้ หมั่นศึกษาเล่าเรียนทั้งทางตรง (ในห้องเรียน) และทางอ้อม (การอ่าน การฟัง สื่อ และประสบการณ์รอบตัว)'},
+ {q:'ค่านิยมข้อที่ 3 ตรงกับข้อใด',
+  choices:['ซื่อสัตย์ เสียสละ อดทน มีอุดมการณ์ในสิ่งที่ดีงามเพื่อส่วนรวม','กตัญญูต่อพ่อแม่ ผู้ปกครอง ครูบาอาจารย์','รักษาวัฒนธรรมประเพณีไทยอันงดงาม','มีระเบียบวินัย เคารพกฎหมาย ผู้น้อยรู้จักการเคารพผู้ใหญ่'],
+  answer:1, ans:['กตัญญู'],
+  hint:'เป็นค่านิยมที่ว่าด้วยการรู้คุณผู้มีพระคุณ',
+  why:'ค่านิยมข้อที่ 3 คือ กตัญญูต่อพ่อแม่ ผู้ปกครอง ครูบาอาจารย์ หมายถึงการรู้คุณและตอบแทนพระคุณของผู้มีพระคุณด้วยการกระทำที่ดีงาม'},
+ {q:'ข้อใดคือค่านิยมข้อที่ 1',
+  choices:['มีความรักชาติ ศาสนา พระมหากษัตริย์','มีศีลธรรม รักษาความสัตย์ หวังดีต่อผู้อื่น','มีสติรู้ตัว รู้คิด รู้ทำ รู้ปฏิบัติ','คำนึงถึงผลประโยชน์ของส่วนรวมมากกว่าประโยชน์ส่วนตน'],
+  answer:0, ans:['1','ข้อ 1','รักชาติ'],
+  hint:'เป็นข้อแรกสุดที่กล่าวถึงสถาบันหลักของชาติ',
+  why:'ค่านิยมข้อที่ 1 คือ มีความรักชาติ ศาสนา พระมหากษัตริย์ ซึ่งเป็นสถาบันหลักของชาติไทย แสดงออกได้ด้วยการเคารพธงชาติ ปฏิบัติตนตามหลักศาสนา และประพฤติตนเป็นพลเมืองดี'},
+ {q:'ข้อความว่า “มีระเบียบวินัย เคารพกฎหมาย ผู้น้อยรู้จักการเคารพผู้ใหญ่” เป็นค่านิยมข้อที่เท่าใด',
+  choices:['ข้อที่ 6','ข้อที่ 7','ข้อที่ 8','ข้อที่ 9'], answer:2, ans:['8','ข้อ 8','ข้อที่ 8'],
+  hint:'อยู่ถัดจากข้อที่ว่าด้วยความเข้าใจการปกครองระบอบประชาธิปไตย',
+  why:'ค่านิยมข้อที่ 8 คือ มีระเบียบวินัย เคารพกฎหมาย ผู้น้อยรู้จักการเคารพผู้ใหญ่ เช่น การเข้าแถว การปฏิบัติตามกฎจราจร และการมีสัมมาคารวะ'},
+ {q:'ค่านิยมข้อที่ 10 ให้นำหลักปรัชญาใดมาใช้ในการดำรงชีวิต',
+  choices:['หลักปรัชญาของเศรษฐกิจพอเพียง','หลักการแข่งขันเสรี','หลักการบริโภคนิยม','หลักการลงทุนเพื่อกำไรสูงสุด'],
+  answer:0, ans:['เศรษฐกิจพอเพียง','พอเพียง'],
+  hint:'เน้นความพอประมาณ มีเหตุผล และมีภูมิคุ้มกันที่ดี',
+  why:'ค่านิยมข้อที่ 10 คือ รู้จักดำรงตนโดยใช้หลักปรัชญาของเศรษฐกิจพอเพียง รู้จักอดออมไว้ใช้ยามจำเป็น มีไว้พอกินพอใช้ ถ้าเหลือก็แบ่งปันหรือจำหน่าย และขยายกิจการเมื่อมีความพร้อม'},
+ {q:'ค่านิยมข้อที่ 12 ซึ่งเป็นข้อสุดท้าย กล่าวถึงเรื่องใด',
+  choices:['การรักษาสุขภาพร่างกายให้แข็งแรง','การคำนึงถึงผลประโยชน์ของส่วนรวมและของชาติมากกว่าผลประโยชน์ของตนเอง','การอดออมเงินไว้ใช้ยามจำเป็น','การเคารพกฎหมายบ้านเมือง'],
+  answer:1, ans:['12','ข้อ 12','ส่วนรวม'],
+  hint:'เป็นข้อที่สรุปรวมเรื่องการเสียสละเพื่อสังคมและประเทศชาติ',
+  why:'ค่านิยมข้อที่ 12 คือ คำนึงถึงผลประโยชน์ของส่วนรวมและของชาติมากกว่าผลประโยชน์ของตนเอง เช่น การช่วยกันรักษาสมบัติส่วนรวมและการเสียสละเพื่อสังคม'},
+ {q:'ข้อความว่า “รักษาวัฒนธรรมประเพณีไทยอันงดงาม” เป็นค่านิยมข้อที่เท่าใด',
+  choices:['ข้อที่ 4','ข้อที่ 5','ข้อที่ 6','ข้อที่ 7'], answer:1, ans:['5','ข้อ 5','ข้อที่ 5'],
+  hint:'อยู่ถัดจากข้อที่ว่าด้วยการใฝ่หาความรู้',
+  why:'ค่านิยมข้อที่ 5 คือ รักษาวัฒนธรรมประเพณีไทยอันงดงาม เช่น การไหว้ การแต่งกายสุภาพ การใช้ภาษาไทยให้ถูกต้อง และการร่วมสืบสานประเพณีท้องถิ่น'},
+ {q:'ข้อใด ไม่ใช่ ค่านิยมหลักของคนไทย 12 ประการ',
+  choices:['มีความกตัญญูต่อผู้มีพระคุณ','มีระเบียบวินัย เคารพกฎหมาย','เอาชนะผู้อื่นทุกวิถีทางเพื่อให้ตนเองได้ประโยชน์','มีศีลธรรม เผื่อแผ่และแบ่งปัน'],
+  answer:2, hint:'ข้อใดขัดกับการอยู่ร่วมกันในสังคมอย่างสันติ',
+  why:'การเอาชนะผู้อื่นทุกวิถีทางเพื่อประโยชน์ของตนเอง ขัดกับค่านิยมข้อที่ 2 ที่ว่าด้วยความซื่อสัตย์เสียสละ และข้อที่ 12 ที่ให้คำนึงถึงประโยชน์ส่วนรวมมากกว่าประโยชน์ส่วนตน'},
+ {q:'ข้อความว่า “มีศีลธรรม รักษาความสัตย์ หวังดีต่อผู้อื่น เผื่อแผ่และแบ่งปัน” เป็นค่านิยมข้อที่เท่าใด',
+  choices:['ข้อที่ 5','ข้อที่ 6','ข้อที่ 9','ข้อที่ 11'], answer:1, ans:['6','ข้อ 6','ข้อที่ 6'],
+  hint:'อยู่ระหว่างข้อที่ว่าด้วยวัฒนธรรมไทยกับข้อที่ว่าด้วยประชาธิปไตย',
+  why:'ค่านิยมข้อที่ 6 คือ มีศีลธรรม รักษาความสัตย์ หวังดีต่อผู้อื่น เผื่อแผ่และแบ่งปัน แสดงออกด้วยการมีน้ำใจ ช่วยเหลือ และแบ่งปันแก่ผู้อื่นโดยไม่หวังสิ่งตอบแทน'}
+],
+post:[
+ {q:'ค่านิยมหลักของคนไทย 12 ประการ กำหนดขึ้นเพื่อสิ่งใดเป็นสำคัญ',
+  fig:FIG.ruler(),
+  choices:['เพื่อจัดอันดับความสามารถของนักเรียนแต่ละคน','เพื่อสร้างคนไทยให้เป็นคนดี มีคุณธรรม และร่วมกันพัฒนาประเทศ','เพื่อใช้แทนกฎหมายของบ้านเมือง','เพื่อกำหนดบทลงโทษของผู้ที่ทำผิดระเบียบ'],
+  answer:1, hint:'ค่านิยมมุ่งที่การสร้างคน ไม่ใช่การจัดอันดับหรือการลงโทษ',
+  why:'ค่านิยมหลัก 12 ประการ มุ่งสร้างคนไทยให้เป็นคนดี มีคุณธรรม มีวินัย ภูมิใจในชาติ และร่วมกันพัฒนาสังคมและประเทศชาติให้เจริญก้าวหน้า'},
+ {q:'ข้อความว่า “รักษาวัฒนธรรมประเพณีไทยอันงดงาม” เป็นค่านิยมข้อที่เท่าใด',
+  choices:['ข้อที่ 3','ข้อที่ 4','ข้อที่ 5','ข้อที่ 6'], answer:2, ans:['5','ข้อ 5','ข้อที่ 5'],
+  hint:'อยู่ถัดจากข้อที่ว่าด้วยการใฝ่หาความรู้',
+  why:'ค่านิยมข้อที่ 5 คือ รักษาวัฒนธรรมประเพณีไทยอันงดงาม เช่น การไหว้ การมีสัมมาคารวะ การใช้ภาษาไทยอย่างถูกต้อง และการร่วมสืบสานประเพณีไทย'},
+ {q:'ค่านิยมข้อที่ 2 ตรงกับข้อใด',
+  choices:['ซื่อสัตย์ เสียสละ อดทน มีอุดมการณ์ในสิ่งที่ดีงามเพื่อส่วนรวม','กตัญญูต่อพ่อแม่ ผู้ปกครอง ครูบาอาจารย์','ใฝ่หาความรู้ หมั่นศึกษาเล่าเรียนทั้งทางตรงและทางอ้อม','มีสติรู้ตัว รู้คิด รู้ทำ รู้ปฏิบัติ'],
+  answer:0, ans:['ซื่อสัตย์'],
+  hint:'เป็นข้อที่ว่าด้วยความตรงไปตรงมาและการเสียสละเพื่อส่วนรวม',
+  why:'ค่านิยมข้อที่ 2 คือ ซื่อสัตย์ เสียสละ อดทน มีอุดมการณ์ในสิ่งที่ดีงามเพื่อส่วนรวม เช่น การไม่ทุจริตในการสอบและการยอมเสียประโยชน์ส่วนตนเพื่อประโยชน์ส่วนรวม'},
+ {q:'ข้อใดคือค่านิยมข้อที่ 3',
+  choices:['มีความรักชาติ ศาสนา พระมหากษัตริย์','กตัญญูต่อพ่อแม่ ผู้ปกครอง ครูบาอาจารย์','มีระเบียบวินัย เคารพกฎหมาย ผู้น้อยรู้จักการเคารพผู้ใหญ่','เข้าใจเรียนรู้การเป็นประชาธิปไตยอันมีพระมหากษัตริย์ทรงเป็นประมุข'],
+  answer:1, ans:['3','ข้อ 3','กตัญญู'],
+  hint:'เป็นค่านิยมที่ว่าด้วยการรู้คุณผู้มีพระคุณ',
+  why:'ค่านิยมข้อที่ 3 คือ กตัญญูต่อพ่อแม่ ผู้ปกครอง ครูบาอาจารย์ ซึ่งแสดงออกด้วยการเชื่อฟัง ช่วยเหลืองาน และตั้งใจเรียนเพื่อตอบแทนพระคุณ'},
+ {q:'ข้อความว่า “มีความเข้มแข็งทั้งร่างกายและจิตใจ ไม่ยอมแพ้ต่ออำนาจฝ่ายต่ำหรือกิเลส” เป็นค่านิยมข้อที่เท่าใด',
+  choices:['ข้อที่ 8','ข้อที่ 9','ข้อที่ 10','ข้อที่ 11'], answer:3, ans:['11','ข้อ 11','ข้อที่ 11'],
+  hint:'อยู่ก่อนข้อสุดท้ายที่ว่าด้วยประโยชน์ส่วนรวม',
+  why:'ค่านิยมข้อที่ 11 คือ มีความเข้มแข็งทั้งร่างกายและจิตใจ ไม่ยอมแพ้ต่ออำนาจฝ่ายต่ำหรือกิเลส มีความละอายเกรงกลัวต่อบาปตามหลักของศาสนา เช่น การออกกำลังกายและการปฏิเสธสิ่งเสพติด'},
+ {q:'ข้อความว่า “รู้จักอดออมไว้ใช้เมื่อยามจำเป็น มีไว้พอกินพอใช้” เป็นแนวปฏิบัติตามค่านิยมข้อใด',
+  choices:['ข้อที่ 7','ข้อที่ 9','ข้อที่ 10','ข้อที่ 12'], answer:2, ans:['10','ข้อ 10','พอเพียง'],
+  hint:'เป็นข้อที่ยึดหลักปรัชญาของเศรษฐกิจพอเพียง',
+  why:'ค่านิยมข้อที่ 10 ให้ดำรงตนตามหลักปรัชญาของเศรษฐกิจพอเพียง คือ พอประมาณ มีเหตุผล และมีภูมิคุ้มกันที่ดี โดยรู้จักอดออมไว้ใช้ยามจำเป็น'},
+ {q:'ค่านิยมข้อที่ 12 สอนให้ผู้เรียนยึดถือสิ่งใดเป็นสำคัญ',
+  choices:['ประโยชน์ของตนเองก่อนเสมอ','ประโยชน์ของส่วนรวมและของชาติมากกว่าประโยชน์ส่วนตน','ประโยชน์ของกลุ่มเพื่อนสนิทเป็นหลัก','ประโยชน์ทางการเงินเป็นหลัก'],
+  answer:1, ans:['12','ข้อ 12','ส่วนรวม'],
+  hint:'เป็นข้อที่ว่าด้วยการเสียสละเพื่อสังคมและประเทศชาติ',
+  why:'ค่านิยมข้อที่ 12 คือ คำนึงถึงผลประโยชน์ของส่วนรวมและของชาติมากกว่าผลประโยชน์ของตนเอง เช่น การดูแลรักษาสมบัติส่วนรวมและการอาสาทำงานเพื่อสังคม'},
+ {q:'ค่านิยมข้อที่ 4 กล่าวถึงเรื่องใด',
+  choices:['การใฝ่หาความรู้ หมั่นศึกษาเล่าเรียนทั้งทางตรงและทางอ้อม','การรักษาวัฒนธรรมประเพณีไทย','การมีระเบียบวินัยและเคารพกฎหมาย','การเสียสละเพื่อประโยชน์ส่วนรวม'],
+  answer:0, ans:['4','ข้อ 4','ใฝ่หาความรู้'],
+  hint:'ทางตรงคือในห้องเรียน ทางอ้อมคือการอ่านและประสบการณ์รอบตัว',
+  why:'ค่านิยมข้อที่ 4 คือ ใฝ่หาความรู้ หมั่นศึกษาเล่าเรียนทั้งทางตรงและทางอ้อม ผู้เรียนจึงควรเรียนรู้ทั้งในห้องเรียนและแสวงหาความรู้เพิ่มเติมด้วยตนเอง'},
+ {q:'ข้อใด ไม่ใช่ ค่านิยมหลักของคนไทย 12 ประการ',
+  choices:['ใช้จ่ายฟุ่มเฟือยตามกระแสนิยมเพื่อให้ทันเพื่อน','ใฝ่หาความรู้ หมั่นศึกษาเล่าเรียน','มีสติรู้ตัว รู้คิด รู้ทำ','รักษาวัฒนธรรมประเพณีไทยอันงดงาม'],
+  answer:0, hint:'ข้อใดขัดกับหลักความพอประมาณและการมีเหตุผล',
+  why:'การใช้จ่ายฟุ่มเฟือยตามกระแสนิยมขัดกับค่านิยมข้อที่ 10 ที่ให้ดำรงตนตามหลักปรัชญาของเศรษฐกิจพอเพียง คือใช้จ่ายอย่างพอประมาณและรู้จักอดออม'},
+ {q:'ข้อความว่า “มีระเบียบวินัย เคารพกฎหมาย ผู้น้อยรู้จักการเคารพผู้ใหญ่” เป็นค่านิยมข้อที่เท่าใด',
+  choices:['ข้อที่ 7','ข้อที่ 8','ข้อที่ 9','ข้อที่ 10'], answer:1, ans:['8','ข้อ 8','ข้อที่ 8'],
+  hint:'อยู่ถัดจากข้อที่ว่าด้วยความเข้าใจการปกครองระบอบประชาธิปไตย',
+  why:'ค่านิยมข้อที่ 8 คือ มีระเบียบวินัย เคารพกฎหมาย ผู้น้อยรู้จักการเคารพผู้ใหญ่ แสดงออกได้จากการเข้าแถว การไม่แซงคิว และการปฏิบัติตามกฎจราจร'}
+]};
+
+/* ---------- ด่าน 2 : คุณสมบัติของผู้ที่มีค่านิยม 12 ประการ ---------- */
+const level2Data = {
+pre:[
+ {q:'ผู้ที่มีค่านิยมข้อที่ 2 “ซื่อสัตย์ เสียสละ อดทน” จะมีคุณสมบัติเด่นตรงกับข้อใด',
+  fig:FIG.badge(2),
+  choices:['ทำความดีเฉพาะเวลาที่มีผู้อื่นเห็น','ทำงานเฉพาะงานที่มีรางวัลตอบแทน','ทำในสิ่งที่ถูกต้องแม้ไม่มีผู้ใดเห็น และยอมเสียประโยชน์ส่วนตนเพื่อส่วนรวม','หลีกเลี่ยงงานที่ยากลำบากอยู่เสมอ'],
+  answer:2, hint:'ความซื่อสัตย์ที่แท้จริงวัดกันตอนที่ไม่มีใครเห็น',
+  why:'คุณสมบัติสำคัญของผู้มีความซื่อสัตย์ เสียสละ อดทน คือ ยึดมั่นในความถูกต้องแม้ไม่มีผู้ใดรับรู้ และพร้อมเสียสละประโยชน์ส่วนตนเพื่อประโยชน์ของส่วนรวม'},
+ {q:'คุณสมบัติของผู้ที่ “ใฝ่หาความรู้” ตรงกับข้อใดมากที่สุด',
+  choices:['อ่านหนังสือเฉพาะคืนก่อนวันสอบ','ค้นคว้าเพิ่มเติมด้วยตนเองอยู่เสมอ ทั้งจากห้องเรียน ห้องสมุด และสื่อที่เชื่อถือได้','เชื่อทุกข้อความที่มีการแชร์กันในสื่อสังคมออนไลน์','รอให้ครูเฉลยคำตอบทุกครั้งโดยไม่คิดเอง'],
+  answer:1, hint:'การใฝ่รู้ต้องทำอย่างสม่ำเสมอและเลือกแหล่งข้อมูลที่น่าเชื่อถือ',
+  why:'ผู้ที่ใฝ่หาความรู้จะแสวงหาความรู้อย่างต่อเนื่องทั้งทางตรงและทางอ้อม รู้จักเลือกแหล่งข้อมูลที่น่าเชื่อถือ และตรวจสอบข้อมูลก่อนเชื่อหรือส่งต่อ'},
+ {q:'ผู้ที่มีความกตัญญูต่อพ่อแม่และครูบาอาจารย์ จะมีลักษณะอย่างไร',
+  choices:['ระลึกถึงพระคุณและตอบแทนด้วยการตั้งใจเรียน ช่วยเหลืองาน และประพฤติตนเป็นคนดี','เชื่อฟังเฉพาะเรื่องที่ตนเองได้ประโยชน์','กล่าวขอบคุณด้วยคำพูดแต่ไม่เคยช่วยเหลือ','ช่วยงานบ้านเฉพาะเมื่อได้ค่าตอบแทน'],
+  answer:0, hint:'ความกตัญญูต้องแสดงออกด้วยการกระทำ ไม่ใช่เพียงคำพูด',
+  why:'ผู้มีความกตัญญูจะรู้คุณผู้มีพระคุณและตอบแทนด้วยการกระทำ เช่น ช่วยเหลืองานบ้าน เชื่อฟังคำสั่งสอน ตั้งใจเรียน และประพฤติตนเป็นคนดีไม่ให้ท่านต้องเสียใจ'},
+ {q:'คนที่ดำรงตนตามหลักปรัชญาของเศรษฐกิจพอเพียง (ค่านิยมข้อที่ 10) มีคุณสมบัติอย่างไร',
+  choices:['ประหยัดจนไม่ยอมใช้จ่ายแม้สิ่งที่จำเป็น','ซื้อสิ่งของตามเพื่อนเพื่อไม่ให้ตกกระแส','ยืมเงินผู้อื่นมาซื้อสิ่งที่อยากได้ก่อน','ใช้จ่ายอย่างพอประมาณ มีเหตุผล และมีเงินออมไว้เป็นภูมิคุ้มกัน'],
+  answer:3, hint:'หลักเศรษฐกิจพอเพียงมี 3 ห่วง คือ พอประมาณ มีเหตุผล และมีภูมิคุ้มกันที่ดี',
+  why:'ความพอเพียงไม่ใช่ความตระหนี่ แต่คือการใช้จ่ายอย่างพอประมาณตามฐานะ มีเหตุผลในการตัดสินใจ และมีเงินออมเป็นภูมิคุ้มกันเมื่อเกิดความจำเป็น'},
+ {q:'ข้อใดเป็นคุณสมบัติของผู้มีระเบียบวินัยอย่างแท้จริง',
+  choices:['ปฏิบัติตามกฎเฉพาะเมื่อมีครูเวรยืนอยู่','ปฏิบัติตามกฎกติกาอย่างสม่ำเสมอ แม้ไม่มีผู้ใดควบคุมดูแล','ปฏิบัติตามกฎเพราะกลัวถูกลงโทษเท่านั้น','เลือกปฏิบัติตามเฉพาะกฎที่ตนเองชอบ'],
+  answer:1, hint:'วินัยที่แท้จริงคือวินัยในตนเอง',
+  why:'ผู้มีระเบียบวินัยอย่างแท้จริงจะปฏิบัติตามกฎกติกาด้วยความสมัครใจและสม่ำเสมอ เพราะเห็นคุณค่าของกฎ ไม่ใช่เพราะกลัวการลงโทษหรือเพราะมีผู้ควบคุม'}
+],
+post:[
+ {q:'ผู้ที่มีค่านิยมข้อที่ 2 “ซื่อสัตย์ เสียสละ อดทน” จะแสดงออกตรงกับข้อใด',
+  fig:FIG.badge(2),
+  choices:['พูดความจริงเฉพาะเรื่องที่ไม่ทำให้ตนเองเดือดร้อน','บอกความจริงแม้ตนเองจะเสียประโยชน์ และอดทนทำงานจนสำเร็จ','ยอมบิดเบือนความจริงเล็กน้อยเพื่อให้ได้คะแนนดี','ละทิ้งงานทันทีเมื่อรู้สึกเหนื่อย'],
+  answer:1, hint:'ความซื่อสัตย์ที่แท้จริงต้องยืนหยัดแม้ต้องเสียประโยชน์',
+  why:'ผู้มีความซื่อสัตย์ เสียสละ อดทน จะยึดมั่นในความจริงและความถูกต้องแม้ต้องเสียประโยชน์ส่วนตน และมีความอดทนมุ่งมั่นทำงานที่รับผิดชอบจนสำเร็จ'},
+ {q:'คุณสมบัติของผู้ที่ “ใฝ่หาความรู้ทั้งทางตรงและทางอ้อม” ตรงกับข้อใด',
+  choices:['เรียนรู้เฉพาะเนื้อหาที่จะออกข้อสอบ','ท่องจำเนื้อหาโดยไม่สนใจความถูกต้องของแหล่งข้อมูล','เรียนรู้จากครูในห้องเรียน และหาความรู้เพิ่มเติมจากการอ่าน การฟัง และประสบการณ์รอบตัว','ปฏิเสธการเรียนรู้สิ่งใหม่ที่อยู่นอกตำราเรียน'],
+  answer:2, hint:'ทางตรงคือในห้องเรียน ทางอ้อมคือสื่อและประสบการณ์รอบตัว',
+  why:'การใฝ่หาความรู้ทั้งทางตรงและทางอ้อม หมายถึงเรียนรู้จากการสอนของครู ควบคู่กับการอ่าน การฟัง การสังเกต และการลงมือปฏิบัติจากประสบการณ์รอบตัว'},
+ {q:'ผู้ที่มีความกตัญญู จะแสดงออกต่อผู้มีพระคุณอย่างไร',
+  choices:['ดูแลเอาใจใส่ ช่วยเหลืองาน และประพฤติตนเป็นคนดีเพื่อตอบแทนพระคุณ','ตอบแทนพระคุณเมื่อตนเองมีเงินมากพอแล้วเท่านั้น','เชื่อฟังเฉพาะเมื่อถูกบังคับ','ระลึกถึงพระคุณเฉพาะในวันสำคัญของปี'],
+  answer:0, hint:'ความกตัญญูแสดงออกได้ทุกวันด้วยการกระทำเล็ก ๆ',
+  why:'ความกตัญญูแสดงออกได้ทุกวันด้วยการช่วยเหลืองาน เอาใจใส่ดูแล เชื่อฟังคำสั่งสอน และประพฤติตนเป็นคนดี ซึ่งเป็นการตอบแทนพระคุณที่มีค่าที่สุด'},
+ {q:'คนที่ “รู้จักอดออม” ตามค่านิยมข้อที่ 10 มีคุณสมบัติอย่างไร',
+  choices:['ใช้เงินให้หมดก่อนแล้วค่อยคิดเรื่องการออม','ออมเงินเฉพาะเดือนที่ได้รับเงินพิเศษ','ขอยืมเงินเพื่อนเมื่อเงินของตนหมด','วางแผนการใช้จ่าย และแบ่งเงินส่วนหนึ่งเก็บออมไว้ใช้ยามจำเป็นอย่างสม่ำเสมอ'],
+  answer:3, hint:'การออมที่ได้ผลต้องวางแผนและทำอย่างสม่ำเสมอ',
+  why:'ผู้ที่รู้จักอดออมจะวางแผนการใช้จ่าย แบ่งเงินออมไว้ก่อนใช้จ่ายอย่างสม่ำเสมอ เพื่อสร้างภูมิคุ้มกันทางการเงินตามหลักปรัชญาของเศรษฐกิจพอเพียง'},
+ {q:'ข้อใดเป็นคุณสมบัติของผู้เคารพกฎหมายและมีวินัยในตนเอง',
+  choices:['หยุดรอสัญญาณไฟจราจรทุกครั้ง แม้ไม่มีเจ้าหน้าที่อยู่','ฝ่าสัญญาณไฟแดงเมื่อเห็นว่าถนนว่าง','ปฏิบัติตามกฎเฉพาะบริเวณที่มีกล้องวงจรปิด','คิดว่ากฎระเบียบมีไว้สำหรับผู้ใหญ่เท่านั้น'],
+  answer:0, hint:'วินัยในตนเองคือการทำถูกต้องแม้ไม่มีใครตรวจสอบ',
+  why:'ผู้เคารพกฎหมายและมีวินัยในตนเองจะปฏิบัติตามกฎอย่างสม่ำเสมอทุกที่ทุกเวลา เพราะเข้าใจว่ากฎมีไว้เพื่อความปลอดภัยและความเป็นระเบียบของส่วนรวม'}
+]};
+
+/* ---------- ด่าน 3 : จำแนกพฤติกรรมให้ตรงกับค่านิยม ---------- */
+const level3Data = {
+pre:[
+ {story:'นิดเก็บกระเป๋าสตางค์ซึ่งมีเงินอยู่ 500 บาท ได้ที่สนามหน้าเสาธง ขณะนั้นไม่มีผู้ใดเห็น',
+  q:'การที่นิดนำกระเป๋าไปมอบให้ครูเพื่อประกาศหาเจ้าของ แสดงถึงค่านิยมข้อใดชัดเจนที่สุด',
+  fig:FIG.ruler(),
+  choices:['ข้อที่ 1 มีความรักชาติ ศาสนา พระมหากษัตริย์','ข้อที่ 2 ซื่อสัตย์ เสียสละ อดทน','ข้อที่ 5 รักษาวัฒนธรรมประเพณีไทย','ข้อที่ 7 เข้าใจการเป็นประชาธิปไตย'],
+  answer:1, ans:['2','ข้อ 2','ซื่อสัตย์'],
+  hint:'ไม่นำของผู้อื่นมาเป็นของตน คือคุณธรรมข้อใด',
+  why:'การไม่นำทรัพย์สินของผู้อื่นมาเป็นของตน แม้ไม่มีผู้ใดเห็น เป็นพฤติกรรมที่สะท้อนความซื่อสัตย์สุจริต ตรงกับค่านิยมข้อที่ 2'},
+ {q:'ทุกเช้านักเรียนเข้าแถวเคารพธงชาติ ร้องเพลงชาติด้วยความตั้งใจ และสวดมนต์ไหว้พระ พฤติกรรมนี้ตรงกับค่านิยมข้อใด',
+  choices:['ข้อที่ 1 มีความรักชาติ ศาสนา พระมหากษัตริย์','ข้อที่ 4 ใฝ่หาความรู้','ข้อที่ 9 มีสติรู้ตัว รู้คิด รู้ทำ','ข้อที่ 10 ดำรงตนตามหลักเศรษฐกิจพอเพียง'],
+  answer:0, ans:['1','ข้อ 1','รักชาติ'],
+  hint:'กิจกรรมหน้าเสาธงเกี่ยวข้องกับสถาบันหลักของชาติ',
+  why:'การเคารพธงชาติ การร้องเพลงชาติ และการสวดมนต์ไหว้พระ เป็นการแสดงออกถึงความรักและเทิดทูนสถาบันชาติและศาสนา ตรงกับค่านิยมข้อที่ 1'},
+ {q:'หลังเลิกเรียน ก้องรีบกลับบ้านไปช่วยแม่ขายของ และตั้งใจทบทวนบทเรียนที่ครูสอนทุกวัน พฤติกรรมนี้ตรงกับค่านิยมข้อใดมากที่สุด',
+  choices:['ข้อที่ 5 รักษาวัฒนธรรมประเพณีไทย','ข้อที่ 3 กตัญญูต่อพ่อแม่ ผู้ปกครอง ครูบาอาจารย์','ข้อที่ 7 เข้าใจการเป็นประชาธิปไตย','ข้อที่ 11 มีความเข้มแข็งทั้งร่างกายและจิตใจ'],
+  answer:1, ans:['3','ข้อ 3','กตัญญู'],
+  hint:'การช่วยงานพ่อแม่และตั้งใจเรียนเพื่อตอบแทนครู คือคุณธรรมข้อใด',
+  why:'การช่วยเหลืองานของพ่อแม่และตั้งใจเรียนเพื่อตอบแทนพระคุณครู เป็นการแสดงความกตัญญูต่อผู้มีพระคุณ ตรงกับค่านิยมข้อที่ 3'},
+ {q:'แก้วข้ามถนนบนทางม้าลายทุกครั้ง และสวมหมวกนิรภัยเมื่อซ้อนรถจักรยานยนต์เสมอ พฤติกรรมนี้ตรงกับค่านิยมข้อใด',
+  choices:['ข้อที่ 4 ใฝ่หาความรู้','ข้อที่ 6 มีศีลธรรม เผื่อแผ่และแบ่งปัน','ข้อที่ 8 มีระเบียบวินัย เคารพกฎหมาย','ข้อที่ 12 คำนึงถึงประโยชน์ส่วนรวม'],
+  answer:2, ans:['8','ข้อ 8','มีวินัย'],
+  hint:'การปฏิบัติตามกฎจราจรเกี่ยวข้องกับค่านิยมข้อใด',
+  why:'การข้ามถนนบนทางม้าลายและสวมหมวกนิรภัยเป็นการปฏิบัติตามกฎจราจร ซึ่งสะท้อนความมีระเบียบวินัยและการเคารพกฎหมาย ตรงกับค่านิยมข้อที่ 8'},
+ {q:'ฟ้าได้รับเงินค่าขนมวันละ 50 บาท ใช้จ่ายวันละ 35 บาท และนำเงินที่เหลือหยอดกระปุกทุกวัน พฤติกรรมนี้ตรงกับค่านิยมข้อใด',
+  fig:FIG.piggy(900,15),
+  choices:['ข้อที่ 1 มีความรักชาติ ศาสนา พระมหากษัตริย์','ข้อที่ 5 รักษาวัฒนธรรมประเพณีไทย','ข้อที่ 7 เข้าใจการเป็นประชาธิปไตย','ข้อที่ 10 ดำรงตนตามหลักเศรษฐกิจพอเพียง รู้จักอดออม'],
+  answer:3, ans:['10','ข้อ 10','พอเพียง'],
+  hint:'การแบ่งเงินเก็บออมไว้ใช้ยามจำเป็น ตรงกับค่านิยมข้อใด',
+  why:'การใช้จ่ายอย่างพอประมาณและเก็บออมเงินส่วนที่เหลือไว้ใช้ยามจำเป็น เป็นการดำรงตนตามหลักปรัชญาของเศรษฐกิจพอเพียง ตรงกับค่านิยมข้อที่ 10'}
+],
+post:[
+ {story:'ขณะสอบกลางภาค ต้นทำข้อสอบไม่ได้อยู่ 2 ข้อ แต่เลือกที่จะคิดด้วยตนเองโดยไม่ลอกคำตอบของเพื่อน',
+  q:'พฤติกรรมของต้นตรงกับค่านิยมข้อใดชัดเจนที่สุด',
+  fig:FIG.ruler(),
+  choices:['ข้อที่ 1 มีความรักชาติ ศาสนา พระมหากษัตริย์','ข้อที่ 5 รักษาวัฒนธรรมประเพณีไทย','ข้อที่ 2 ซื่อสัตย์ เสียสละ อดทน','ข้อที่ 7 เข้าใจการเป็นประชาธิปไตย'],
+  answer:2, ans:['2','ข้อ 2','ซื่อสัตย์'],
+  hint:'การไม่ทุจริตในการสอบ คือคุณธรรมข้อใด',
+  why:'การไม่ลอกคำตอบของผู้อื่นและทำข้อสอบด้วยความสามารถของตนเอง เป็นความซื่อสัตย์สุจริตต่อตนเองและผู้อื่น ตรงกับค่านิยมข้อที่ 2'},
+ {q:'เมื่อได้ยินเสียงเพลงชาติเวลา 08.00 น. ขณะอยู่นอกโรงเรียน ฝนหยุดยืนตรงจนเพลงจบ พฤติกรรมนี้ตรงกับค่านิยมข้อใด',
+  choices:['ข้อที่ 4 ใฝ่หาความรู้','ข้อที่ 1 มีความรักชาติ ศาสนา พระมหากษัตริย์','ข้อที่ 9 มีสติรู้ตัว รู้คิด รู้ทำ','ข้อที่ 10 ดำรงตนตามหลักเศรษฐกิจพอเพียง'],
+  answer:1, ans:['1','ข้อ 1','รักชาติ'],
+  hint:'การยืนตรงเคารพธงชาติเกี่ยวข้องกับสถาบันหลักใด',
+  why:'การหยุดยืนตรงเคารพธงชาติแม้อยู่นอกโรงเรียน แสดงถึงความรักและความภูมิใจในชาติอย่างแท้จริง ตรงกับค่านิยมข้อที่ 1'},
+ {q:'ปอนด์ช่วยพ่อแม่ดูแลน้องหลังเลิกเรียน และยกมือไหว้ขอบคุณครูทุกครั้งที่ได้รับคำแนะนำ พฤติกรรมนี้ตรงกับค่านิยมข้อใด',
+  choices:['ข้อที่ 3 กตัญญูต่อพ่อแม่ ผู้ปกครอง ครูบาอาจารย์','ข้อที่ 6 มีศีลธรรม เผื่อแผ่และแบ่งปัน','ข้อที่ 8 มีระเบียบวินัย เคารพกฎหมาย','ข้อที่ 12 คำนึงถึงประโยชน์ส่วนรวม'],
+  answer:0, ans:['3','ข้อ 3','กตัญญู'],
+  hint:'การตอบแทนพระคุณพ่อแม่และครู คือคุณธรรมข้อใด',
+  why:'การช่วยเหลืองานของพ่อแม่และแสดงความเคารพขอบคุณครู เป็นการแสดงความกตัญญูต่อผู้มีพระคุณ ตรงกับค่านิยมข้อที่ 3'},
+ {q:'ขณะซื้ออาหารกลางวัน บอยเข้าแถวตามลำดับก่อนหลังและไม่แซงคิวแม้จะรีบกลับไปทำเวร พฤติกรรมนี้ตรงกับค่านิยมข้อใด',
+  choices:['ข้อที่ 4 ใฝ่หาความรู้','ข้อที่ 5 รักษาวัฒนธรรมประเพณีไทย','ข้อที่ 11 มีความเข้มแข็งทั้งร่างกายและจิตใจ','ข้อที่ 8 มีระเบียบวินัย เคารพกฎหมาย ผู้น้อยรู้จักการเคารพผู้ใหญ่'],
+  answer:3, ans:['8','ข้อ 8','มีวินัย'],
+  hint:'การเข้าแถวตามลำดับคือการปฏิบัติตามกติกาของส่วนรวม',
+  why:'การเข้าแถวตามลำดับและไม่แซงคิว เป็นการเคารพกติกาของส่วนรวมและมีระเบียบวินัยในตนเอง ตรงกับค่านิยมข้อที่ 8'},
+ {q:'มุกนำเงินที่เหลือจากค่าขนมไปฝากธนาคารโรงเรียนทุกสัปดาห์เพื่อเก็บไว้ใช้ยามจำเป็น พฤติกรรมนี้ตรงกับค่านิยมข้อใด',
+  fig:FIG.piggy(840,20),
+  choices:['ข้อที่ 1 มีความรักชาติ ศาสนา พระมหากษัตริย์','ข้อที่ 10 ดำรงตนตามหลักเศรษฐกิจพอเพียง รู้จักอดออม','ข้อที่ 5 รักษาวัฒนธรรมประเพณีไทย','ข้อที่ 7 เข้าใจการเป็นประชาธิปไตย'],
+  answer:1, ans:['10','ข้อ 10','พอเพียง'],
+  hint:'การฝากเงินเพื่อเก็บไว้ใช้ยามจำเป็นคือการสร้างภูมิคุ้มกัน',
+  why:'การเก็บออมอย่างสม่ำเสมอเพื่อไว้ใช้ยามจำเป็น เป็นการสร้างภูมิคุ้มกันที่ดีตามหลักปรัชญาของเศรษฐกิจพอเพียง ตรงกับค่านิยมข้อที่ 10'}
+]};
+
+/* ---------- ด่าน 4 : การนำค่านิยมไปใช้ในชีวิตประจำวัน (สถานการณ์ / โจทย์ปัญหา) ---------- */
+const level4Data = {
+pre:[
+ {story:'ระหว่างการสอบย่อยวิชาวิทยาศาสตร์ เพื่อนสนิทกระซิบขอลอกคำตอบจากแก้ว',
+  q:'ถ้านักเรียนเป็นแก้ว ควรปฏิบัติอย่างไรจึงเหมาะสมที่สุดตามค่านิยม 12 ประการ',
+  choices:['ให้เพื่อนลอกเพราะเป็นเพื่อนสนิท','ปฏิเสธอย่างสุภาพ ตั้งใจทำข้อสอบของตน และชวนเพื่อนมาทบทวนบทเรียนด้วยกันภายหลัง','แกล้งทำเป็นไม่ได้ยิน แล้วนำไปเล่าให้เพื่อนคนอื่นฟัง','ให้ลอกเพียงครึ่งเดียวเพื่อจะได้ไม่ผิดมาก'],
+  answer:1, hint:'ต้องรักษาความซื่อสัตย์ไว้ พร้อมกับยังหวังดีต่อเพื่อน',
+  why:'การปฏิเสธอย่างสุภาพเป็นการรักษาความซื่อสัตย์ตามค่านิยมข้อที่ 2 ส่วนการชวนเพื่อนมาทบทวนบทเรียนภายหลังเป็นการหวังดีและช่วยเหลือเพื่อนอย่างถูกวิธี ตามค่านิยมข้อที่ 6'},
+ {story:'โตเห็นเพื่อนทิ้งถุงขนมลงบนสนามหญ้าของโรงเรียนขณะที่ไม่มีครูอยู่บริเวณนั้น',
+  q:'การปฏิบัติใดสะท้อนการคำนึงถึงประโยชน์ส่วนรวมได้ดีที่สุด',
+  choices:['เดินผ่านไปเพราะไม่ใช่ขยะของตนเอง','ถ่ายภาพไปประจานเพื่อนในสื่อสังคมออนไลน์','เก็บขยะไปทิ้งถัง และบอกเพื่อนด้วยถ้อยคำสุภาพให้ช่วยกันรักษาความสะอาด','รอให้นักการภารโรงมาเก็บเอง'],
+  answer:2, hint:'ต้องแก้ปัญหาที่ส่วนรวมได้ประโยชน์ โดยไม่ทำให้ผู้อื่นเสียหาย',
+  why:'การเก็บขยะไปทิ้งและตักเตือนเพื่อนด้วยถ้อยคำสุภาพ เป็นการดูแลสมบัติส่วนรวมตามค่านิยมข้อที่ 12 ส่วนการประจานผู้อื่นในสื่อออนไลน์เป็นการทำให้ผู้อื่นเสียหาย ซึ่งขัดกับค่านิยมข้อที่ 6'},
+ {story:'แอมอยากได้รองเท้ากีฬาคู่ใหม่ราคา 900 บาท จึงวางแผนเก็บออมเงินค่าขนมวันละ 30 บาท',
+  q:'แอมต้องเก็บออมอย่างน้อยกี่วันจึงจะซื้อรองเท้าได้ และการกระทำนี้สอดคล้องกับค่านิยมข้อใด',
+  fig:FIG.piggy(900,30),
+  choices:['25 วัน และสอดคล้องกับค่านิยมข้อที่ 10','30 วัน และสอดคล้องกับค่านิยมข้อที่ 10','35 วัน และสอดคล้องกับค่านิยมข้อที่ 12','45 วัน และสอดคล้องกับค่านิยมข้อที่ 4'],
+  answer:1, ans:['30','30 วัน'],
+  hint:'นำเงินเป้าหมายตั้ง แล้วหารด้วยจำนวนเงินที่ออมได้ต่อวัน',
+  why:'จำนวนวันที่ต้องออม = 900 ÷ 30 = 30 วัน การตั้งเป้าหมายและเก็บออมอย่างมีวินัยเป็นการดำรงตนตามหลักปรัชญาของเศรษฐกิจพอเพียง ตรงกับค่านิยมข้อที่ 10'},
+ {story:'พรุ่งนี้มีสอบวิชาคณิตศาสตร์ แต่คืนนี้เพื่อนชวนเล่นเกมออนไลน์ถึงเที่ยงคืน',
+  q:'การตัดสินใจใดแสดงถึงการมีสติ รู้คิด รู้ทำ และการใฝ่หาความรู้',
+  choices:['เล่นเกมก่อนแล้วค่อยตื่นเช้ามาอ่านหนังสือ','ปฏิเสธเพื่อนอย่างสุภาพ ทบทวนบทเรียนให้เรียบร้อย แล้วพักผ่อนให้เพียงพอ','เล่นเกมไปพร้อมกับเปิดหนังสือวางไว้ข้าง ๆ','เลิกคบเพื่อนที่ชวนเล่นเกมทันที'],
+  answer:1, hint:'ต้องจัดลำดับความสำคัญของงานให้ถูกต้องโดยไม่ทำร้ายความสัมพันธ์',
+  why:'การยั้งคิดและจัดลำดับความสำคัญก่อนตัดสินใจ เป็นการมีสติ รู้คิด รู้ทำ ตามค่านิยมข้อที่ 9 ประกอบกับการทบทวนบทเรียนตามค่านิยมข้อที่ 4 โดยยังรักษาความสัมพันธ์กับเพื่อนไว้'},
+ {story:'บนรถโดยสารประจำทางที่มีผู้โดยสารเต็ม มีหญิงมีครรภ์และผู้สูงอายุยืนอยู่ใกล้ที่นั่งของนักเรียน',
+  q:'นักเรียนควรปฏิบัติอย่างไรจึงสะท้อนค่านิยมข้อที่ 6 และข้อที่ 8 ได้ดีที่สุด',
+  choices:['ลุกให้ผู้สูงอายุและหญิงมีครรภ์นั่ง พร้อมกล่าวเชิญด้วยถ้อยคำสุภาพ','แกล้งหลับเพื่อจะได้ไม่ต้องลุก','รอดูว่ามีผู้อื่นลุกก่อนหรือไม่แล้วค่อยตัดสินใจ','ลุกให้นั่งแต่แสดงสีหน้าไม่พอใจ'],
+  answer:0, hint:'ความมีน้ำใจต้องมาพร้อมกับกิริยาวาจาที่สุภาพ',
+  why:'การสละที่นั่งพร้อมกล่าวเชิญด้วยถ้อยคำสุภาพ แสดงถึงการหวังดีต่อผู้อื่นและการเผื่อแผ่ตามค่านิยมข้อที่ 6 และการที่ผู้น้อยรู้จักเคารพผู้ใหญ่ตามค่านิยมข้อที่ 8'}
+],
+post:[
+ {story:'ระหว่างทำความสะอาดห้องเรียน ต้นพบธนบัตรใบละ 100 บาท ตกอยู่ใต้โต๊ะ โดยไม่มีผู้ใดเห็น',
+  q:'ต้นควรปฏิบัติอย่างไรจึงเหมาะสมที่สุดตามค่านิยม 12 ประการ',
+  choices:['เก็บไว้ใช้เองเพราะไม่มีผู้ใดเห็น','นำไปมอบให้ครูที่ปรึกษาเพื่อประกาศหาเจ้าของ','แบ่งกับเพื่อนที่อยู่ในห้องคนละครึ่ง','นำไปซื้อขนมมาแบ่งเพื่อนทั้งห้อง'],
+  answer:1, hint:'ทรัพย์สินที่เก็บได้ยังคงเป็นของเจ้าของเดิมเสมอ',
+  why:'การนำทรัพย์สินที่เก็บได้ไปมอบให้ครูเพื่อประกาศหาเจ้าของ เป็นการแสดงความซื่อสัตย์สุจริตตามค่านิยมข้อที่ 2 แม้จะไม่มีผู้ใดเห็นการกระทำนั้นก็ตาม'},
+ {story:'เมื่อเข้าห้องน้ำของโรงเรียน ใบเตยพบว่ามีก๊อกน้ำเปิดทิ้งไว้และเปิดไฟอยู่ทั้งที่ไม่มีผู้ใช้งาน',
+  q:'การปฏิบัติใดสะท้อนการคำนึงถึงประโยชน์ส่วนรวมได้ดีที่สุด',
+  choices:['ปล่อยไว้เพราะเป็นหน้าที่ของนักเรียนเวรประจำวัน','ปิดก๊อกน้ำและปิดไฟ แล้วแจ้งครูหากพบว่าอุปกรณ์ชำรุด','บ่นให้เพื่อนฟังว่าไม่มีผู้ใดรับผิดชอบ','ถ่ายคลิปลงสื่อสังคมออนไลน์เพื่อตำหนิโรงเรียน'],
+  answer:1, hint:'ทรัพยากรของโรงเรียนคือสมบัติของส่วนรวมที่ทุกคนต้องช่วยกันดูแล',
+  why:'การปิดน้ำปิดไฟและแจ้งครูเมื่อพบอุปกรณ์ชำรุด เป็นการประหยัดทรัพยากรและดูแลสมบัติส่วนรวม ตรงกับค่านิยมข้อที่ 10 และข้อที่ 12'},
+ {story:'ปุ้ยอยากได้กระเป๋านักเรียนใบใหม่ราคา 840 บาท จึงวางแผนเก็บออมเงินค่าขนมวันละ 20 บาท',
+  q:'ปุ้ยต้องเก็บออมอย่างน้อยกี่วันจึงจะซื้อกระเป๋าได้ และการกระทำนี้สอดคล้องกับค่านิยมข้อใด',
+  fig:FIG.piggy(840,20),
+  choices:['36 วัน และสอดคล้องกับค่านิยมข้อที่ 10','40 วัน และสอดคล้องกับค่านิยมข้อที่ 12','42 วัน และสอดคล้องกับค่านิยมข้อที่ 10','48 วัน และสอดคล้องกับค่านิยมข้อที่ 4'],
+  answer:2, ans:['42','42 วัน'],
+  hint:'นำเงินเป้าหมายตั้ง แล้วหารด้วยจำนวนเงินที่ออมได้ต่อวัน',
+  why:'จำนวนวันที่ต้องออม = 840 ÷ 20 = 42 วัน การตั้งเป้าหมายและออมอย่างมีวินัยก่อนซื้อสิ่งที่ต้องการ เป็นการดำรงตนตามหลักปรัชญาของเศรษฐกิจพอเพียง ตรงกับค่านิยมข้อที่ 10'},
+ {story:'งานกลุ่มวิชาสังคมศึกษาต้องส่งในวันพรุ่งนี้ แต่เพื่อนชวนไปชมภาพยนตร์รอบค่ำ',
+  q:'การตัดสินใจใดแสดงถึงความรับผิดชอบ การมีสติ และการคำนึงถึงส่วนรวม',
+  choices:['ไปชมภาพยนตร์ก่อนแล้วให้เพื่อนในกลุ่มทำงานแทน','ทำงานส่วนของตนให้เสร็จและส่งให้กลุ่มก่อน แล้วค่อยนัดชมภาพยนตร์ในวันหยุด','ไปชมภาพยนตร์แล้วขอให้ครูเลื่อนกำหนดส่งงาน','ปฏิเสธเพื่อนด้วยถ้อยคำรุนแรงเพื่อไม่ให้ชวนอีก'],
+  answer:1, hint:'ความรับผิดชอบต่อกลุ่มต้องมาก่อน แต่ยังรักษามารยาทต่อเพื่อนไว้',
+  why:'การทำงานส่วนของตนให้เสร็จก่อนเป็นการรับผิดชอบต่อส่วนรวมตามค่านิยมข้อที่ 12 และการยั้งคิดจัดลำดับความสำคัญคือการมีสติ รู้คิด รู้ทำ ตามค่านิยมข้อที่ 9'},
+ {story:'ขณะเดินกลับบ้าน ฟ้าเห็นรุ่นพี่กลุ่มหนึ่งกำลังล้อเลียนและแกล้งรุ่นน้องจนรุ่นน้องร้องไห้',
+  q:'ฟ้าควรปฏิบัติอย่างไรจึงเหมาะสมและปลอดภัยที่สุด',
+  choices:['เข้าไปต่อว่ารุ่นพี่ด้วยถ้อยคำรุนแรง','ยืนดูเฉย ๆ เพราะไม่ใช่เรื่องของตนเอง','รีบแจ้งครูหรือผู้ใหญ่ที่อยู่ใกล้ที่สุด และปลอบใจรุ่นน้องเมื่อปลอดภัยแล้ว','ถ่ายคลิปไว้แล้วส่งต่อให้เพื่อน ๆ ดู'],
+  answer:2, hint:'ต้องช่วยเหลือผู้ที่เดือดร้อนโดยไม่ทำให้สถานการณ์รุนแรงขึ้น',
+  why:'การแจ้งครูหรือผู้ใหญ่เป็นวิธีช่วยเหลือที่ปลอดภัยและได้ผล สะท้อนความหวังดีต่อผู้อื่นตามค่านิยมข้อที่ 6 ส่วนการเข้าไปโต้เถียงหรือถ่ายคลิปส่งต่อจะทำให้ปัญหาลุกลามและละเมิดสิทธิผู้อื่น'}
+]};
+
+/* =================================================================================
+   ส่วนที่ 4 : ENGINE — ปกติไม่ต้องแก้ไขส่วนนี้
+   ================================================================================= */
+const BANK = {1:level1Data, 2:level2Data, 3:level3Data, 4:level4Data};
+const KEYS = ['ก','ข','ค','ง','จ'];
+const LS = 'values12_records_v1';
+let S = null, timer = null, typedPref = CONFIG.typedModeDefault;
+
+const $ = id => document.getElementById(id);
+function show(id){document.querySelectorAll('.screen').forEach(s=>s.classList.remove('on'));$(id).classList.add('on');window.scrollTo({top:0,behavior:'smooth'});}
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
+function mmss(s){const m=Math.floor(s/60),x=s%60;return String(m).padStart(2,'0')+':'+String(x).padStart(2,'0');}
+function lv(n){return LEVELS.find(l=>l.id===n);}
+function toast(msg){$('modalBody').innerHTML='<h2>'+msg+'</h2><button class="btn" onclick="closeMask()">ตกลง</button>';$('mask').classList.add('on');}
+function closeMask(){$('mask').classList.remove('on');}
+function records(){try{return JSON.parse(localStorage.getItem(LS)||'[]');}catch(e){return [];}}
+function saveRecords(r){localStorage.setItem(LS,JSON.stringify(r));}
+function norm(s){
+  return String(s).trim()
+    .replace(/[๐-๙]/g,d=>'๐๑๒๓๔๕๖๗๘๙'.indexOf(d))
+    .replace(/,/g,'')
+    .replace(/^(ค่านิยม)?\s*(ข้อที่|ข้อ)\s*/,'')
+    .replace(/\s+/g,'')
+    .replace(/(วัน|บาท|ประการ|ข้อ)$/,'')
+    .toLowerCase();
+}
+function sameAns(user,q){
+  const u=norm(user); if(!u) return false;
+  const acc=(q.ans||[]).concat([q.choices[q.answer]]);
+  for(const a of acc){
+    const n=norm(a);
+    if(u===n) return true;
+    if(n.length>3 && u.length>3 && n.indexOf(u)===0) return true;
+    const x=parseFloat(u), y=parseFloat(n);
+    if(!isNaN(x)&&!isNaN(y)&&Math.abs(x-y)<1e-9&&u.replace(/[0-9.]/g,'')==='') return true;
+  }
+  return false;
+}
+function canType(q){ return !!(q.ans && q.ans.length); }
+function toggleType(){typedPref=!typedPref;$('tglType').classList.toggle('on',typedPref);}
+
+/* ---- validator ---- */
+(function validate(){
+  let bad=[];
+  [1,2,3,4].forEach(n=>['pre','post'].forEach(m=>{
+    (BANK[n][m]||[]).forEach((q,i)=>{
+      if(!q.q||!Array.isArray(q.choices)||q.choices.length<2) bad.push('ด่าน'+n+' '+m+' ข้อ'+(i+1)+' : โครงสร้างไม่ครบ');
+      if(typeof q.answer!=='number'||q.answer<0||q.answer>=(q.choices||[]).length) bad.push('ด่าน'+n+' '+m+' ข้อ'+(i+1)+' : ค่า answer ไม่ถูกต้อง');
+    });
+    const need=CONFIG.questionCount[n]||0;
+    if((BANK[n][m]||[]).length<need) bad.push('ด่าน'+n+' '+m+' : มีข้อสอบ '+(BANK[n][m]||[]).length+' ข้อ แต่ตั้งค่าไว้ '+need+' ข้อ');
+  }));
+  if(bad.length) console.warn('ตรวจพบปัญหาในคลังข้อสอบ\n'+bad.join('\n'));
+})();
+
+/* ---- guide ---- */
+function openGuide(){
+  let h='';
+  VALUES.forEach(v=>{ h+='<div class="vrow"><div class="vnum" style="background:'+v.c+'">'+v.n+'</div><div>'+esc(v.t)+'</div></div>'; });
+  $('guideList').innerHTML=h;
+  show('scr-guide');
+}
+
+/* ---- build queue ---- */
+function buildQueue(mode){
+  const out=[];
+  [1,2,3,4].forEach(n=>{
+    let pool;
+    if(mode==='practice') pool=(BANK[n].pre||[]).concat(BANK[n].post||[]);
+    else pool=(BANK[n][mode]||[]).slice();
+    if(CONFIG.shuffleQuestions||mode==='practice') pool=shuffle(pool);
+    pool.slice(0,CONFIG.questionCount[n]||pool.length).forEach(q=>{
+      let item=Object.assign({},q), map=q.choices.map((c,i)=>i);
+      if(CONFIG.shuffleChoices){map=shuffle(map);item.choices=map.map(i=>q.choices[i]);item.answer=map.indexOf(q.answer);}
+      item.level=n; out.push(item);
+    });
+  });
+  return out;
+}
+
+/* ---- start ---- */
+function startTest(mode){
+  const name=($('inName').value||'').trim();
+  if(mode!=='practice' && !name){ toast('กรุณากรอกชื่อ-สกุลก่อนเริ่มทำแบบทดสอบ'); return; }
+  S={ mode, name:name||'ผู้ฝึกซ้อม', room:($('inRoom').value||'').trim(), no:($('inNo').value||'').trim(),
+      list:buildQueue(mode), i:0, score:0, hearts:CONFIG.hearts, locked:false,
+      typed:typedPref, usedHint:false, qStart:Date.now(), t0:Date.now(), log:[] };
+  clearInterval(timer);
+  timer=setInterval(()=>{ $('hud-time').textContent=mmss(Math.floor((Date.now()-S.t0)/1000)); },500);
+  show('scr-quiz'); renderQ();
+}
+function quitQuiz(){
+  $('modalBody').innerHTML='<h2>ออกจากแบบทดสอบ</h2><p>ผลที่ทำไว้จะยังไม่ถูกบันทึก</p>'+
+    '<button class="btn ghost" onclick="closeMask()">ทำต่อ</button> <button class="btn" onclick="closeMask();clearInterval(timer);show(\'scr-home\')">ออก</button>';
+  $('mask').classList.add('on');
+}
+
+/* ---- render ---- */
+function drawHearts(){
+  let h=''; for(let k=0;k<CONFIG.hearts;k++) h+='<span class="heart'+(k<S.hearts?'':' off')+'">&#10084;&#65039;</span>';
+  $('hud-hearts').innerHTML=h;
+}
+function renderQ(){
+  const q=S.list[S.i], L=lv(q.level);
+  S.locked=false; S.usedHint=false; S.qStart=Date.now();
+  $('hud-q').textContent='ข้อ '+(S.i+1)+'/'+S.list.length;
+  $('hud-score').textContent=S.score;
+  $('hud-bar').style.width=((S.i)/S.list.length*100)+'%';
+  drawHearts();
+  $('q-lv').style.background='linear-gradient(180deg,'+L.c+','+L.d+')';
+  $('q-lv').innerHTML='ด่าน '+L.id+' · '+esc(L.name);
+  $('q-story').innerHTML=q.story?'<div class="story"><b>สถานการณ์ :</b> '+esc(q.story)+'</div>':'';
+  $('q-text').innerHTML=esc(q.q);
+  $('q-fig').innerHTML=q.fig||'';
+  $('q-hint').innerHTML=''; $('q-fb').innerHTML='';
+  $('btnHint').disabled=false; $('btnNext').style.display='none';
+  const typable=canType(q);
+  $('btnMode').style.display=typable?'inline-flex':'none';
+  if(!typable) S.typed=false;
+  $('btnMode').innerHTML=S.typed?'กลับไปแบบเลือกตอบ':'พิมพ์คำตอบเอง';
+  if(S.typed){
+    $('q-area').innerHTML='<div class="typebox"><input id="tin" placeholder="พิมพ์คำตอบ แล้วกด Enter" autocomplete="off">'+
+      '<button class="btn p sm" onclick="checkTyped()">ตรวจคำตอบ</button></div>'+
+      '<p class="note" style="margin:8px 2px 0">พิมพ์คำตอบสั้น ๆ เช่น 4 หรือ ข้อ 4 หรือ กตัญญู · ตอบถูกได้โบนัส +'+CONFIG.pointsTypedBonus+' คะแนน</p>';
+    const t=$('tin'); t.focus(); t.addEventListener('keydown',e=>{if(e.key==='Enter')checkTyped();});
+  }else{
+    let c='<div class="choices">';
+    q.choices.forEach((ch,i)=>{ c+='<button class="ch" id="ch'+i+'" onclick="pick('+i+')"><span class="k">'+KEYS[i]+'</span><span>'+esc(ch)+'</span></button>'; });
+    $('q-area').innerHTML=c+'</div>';
+  }
+}
+function switchMode(){ if(S.locked) return; S.typed=!S.typed; typedPref=S.typed; $('tglType').classList.toggle('on',typedPref); renderQ(); }
+function useHint(){
+  if(S.locked) return;
+  const q=S.list[S.i]; S.usedHint=true; $('btnHint').disabled=true;
+  $('q-hint').innerHTML='<div class="hintbox"><b>คำใบ้ :</b> '+esc(q.hint||'ลองทบทวนใบความรู้ค่านิยม 12 ประการอีกครั้ง')+
+    '<div class="note" style="margin-top:4px">(ใช้คำใบ้แล้ว ข้อนี้จะได้ '+(CONFIG.pointsCorrect-CONFIG.hintPenalty)+' คะแนนเมื่อตอบถูก)</div></div>';
+}
+function pick(i){ if(S.locked) return; judge(i===S.list[S.i].answer, S.list[S.i].choices[i], false); }
+function checkTyped(){
+  if(S.locked) return;
+  const v=($('tin').value||'').trim();
+  if(!v){ $('tin').focus(); return; }
+  judge(sameAns(v,S.list[S.i]), v, true);
+}
+function judge(ok,userAns,typed){
+  S.locked=true;
+  const q=S.list[S.i];
+  let pts=0;
+  if(ok){ pts=CONFIG.pointsCorrect-(S.usedHint?CONFIG.hintPenalty:0)+(typed?CONFIG.pointsTypedBonus:0); S.score+=pts; }
+  else if(S.hearts>0){ S.hearts--; }
+  if(!S.typed){
+    q.choices.forEach((c,i)=>{
+      const b=$('ch'+i); if(!b) return; b.disabled=true;
+      if(i===q.answer) b.classList.add('right');
+      else if(!ok && String(c)===String(userAns)) b.classList.add('wrong');
+    });
+  }else{
+    const t=$('tin'); if(t){t.disabled=true; t.style.borderColor=ok?'#17b890':'#ef4b63';}
+  }
+  $('hud-score').textContent=S.score;
+  drawHearts();
+  $('q-fb').innerHTML='<div class="fb '+(ok?'ok':'no')+'"><b>'+(ok?'ตอบถูกต้อง ได้ '+pts+' คะแนน':'ยังไม่ถูก ลองดูเฉลยและคำอธิบาย')+'</b>'+
+    (ok?'':'<div><b style="display:inline;font-size:16px">คำตอบที่ถูกต้อง :</b> '+esc(q.choices[q.answer])+'</div>')+
+    '<div style="margin-top:5px"><b style="display:inline;font-size:16px">เหตุผล :</b> '+esc(q.why||'')+'</div></div>';
+  $('btnHint').disabled=true;
+  $('btnNext').style.display='inline-flex';
+  $('btnNext').textContent=(S.i===S.list.length-1)?'ดูผลคะแนน':'ข้อถัดไป';
+  S.log.push({level:q.level,q:q.q,story:q.story||'',user:String(userAns),correct:q.choices[q.answer],
+    ok,typed,hint:S.usedHint,why:q.why||'',sec:Math.round((Date.now()-S.qStart)/1000)});
+  if(S.hearts===0 && S.i<S.list.length-1) setTimeout(heartOut,650);
+}
+function heartOut(){
+  $('modalBody').innerHTML='<h2>หัวใจหมดแล้ว</h2><p style="font-size:16px">ไม่เป็นไรเลย เติมหัวใจแล้วไปต่อได้ ความผิดพลาดคือบันไดของการเรียนรู้</p>'+
+    '<button class="btn g" onclick="refill()">เติมหัวใจ '+CONFIG.refillHearts+' ดวง แล้วทำต่อ</button>'+
+    '<button class="btn ghost" onclick="closeMask();finish()">จบและดูผลคะแนน</button>';
+  $('mask').classList.add('on');
+}
+function refill(){ S.hearts=CONFIG.refillHearts; closeMask(); drawHearts(); }
+function nextQ(){ if(S.i===S.list.length-1) finish(); else { S.i++; renderQ(); } }
+document.addEventListener('keydown',e=>{
+  if(!$('scr-quiz').classList.contains('on')) return;
+  if(e.key==='Enter' && S && S.locked){ e.preventDefault(); nextQ(); return; }
+  if(S && !S.locked && !S.typed){ const i=['1','2','3','4','5'].indexOf(e.key); if(i>=0 && i<S.list[S.i].choices.length) pick(i); }
+});
+
+/* ---- finish & result ---- */
+function finish(){
+  clearInterval(timer);
+  const total=S.list.length, correct=S.log.filter(x=>x.ok).length;
+  const pct=Math.round(correct/total*100), secs=Math.round((Date.now()-S.t0)/1000);
+  const rec={id:Date.now(),name:S.name,room:S.room,no:S.no,mode:S.mode,total,correct,pct,
+    points:S.score,secs,date:new Date().toLocaleString('th-TH'),items:S.log};
+  if(S.mode!=='practice'){ const r=records(); r.push(rec); saveRecords(r); }
+  renderResult(rec); show('scr-result');
+}
+function strandStat(items){
+  return LEVELS.map(L=>{
+    const a=items.filter(x=>x.level===L.id);
+    return {L,n:a.length,c:a.filter(x=>x.ok).length,p:a.length?Math.round(a.filter(x=>x.ok).length/a.length*100):0};
+  });
+}
+function renderResult(rec){
+  const pass=rec.pct>=CONFIG.passPercent;
+  const stars=rec.pct>=90?5:rec.pct>=80?4:rec.pct>=70?3:rec.pct>=60?2:1;
+  const st=strandStat(rec.items);
+  const weak=st.filter(s=>s.p<CONFIG.passPercent);
+  const modeName={pre:'แบบทดสอบก่อนเรียน',post:'แบบทดสอบหลังเรียน',practice:'โหมดฝึกซ้อม'}[rec.mode];
+  let h='<div class="card" style="text-align:center">'+
+    '<div class="lvtag" style="background:linear-gradient(180deg,'+(pass?'#17b890,#0d7d61':'#ff8c1a,#c25d00')+')">'+modeName+' · '+esc(rec.name)+(rec.room?' · '+esc(rec.room):'')+'</div>'+
+    '<div style="font-size:46px;letter-spacing:4px">'+'&#11088;'.repeat(stars)+'<span style="opacity:.25">'+'&#11088;'.repeat(5-stars)+'</span></div>'+
+    '<div class="scorebig">'+rec.correct+' / '+rec.total+'</div>'+
+    '<div style="font-size:22px;font-weight:800;margin:4px 0 10px">คิดเป็น '+rec.pct+'% · คะแนนสะสม '+rec.points+' แต้ม</div>'+
+    '<div><span class="pill">ใช้เวลา '+mmss(rec.secs)+'</span> <span class="pill">ใช้คำใบ้ '+rec.items.filter(x=>x.hint).length+' ข้อ</span> '+
+    '<span class="pill">พิมพ์คำตอบเอง '+rec.items.filter(x=>x.typed).length+' ข้อ</span></div>'+
+    '<p style="font-size:18px;font-weight:700;margin:14px 0 2px">'+(pass?'ยอดเยี่ยม ผ่านเกณฑ์ '+CONFIG.passPercent+'% แล้ว':'ยังไม่ผ่านเกณฑ์ '+CONFIG.passPercent+'% ลองทบทวนใบความรู้แล้วทำอีกครั้ง')+'</p>'+
+    (rec.mode!=='practice'?'<p class="note">บันทึกผลลงรายงานของครูเรียบร้อยแล้ว</p>':'<p class="note">โหมดฝึกซ้อมไม่บันทึกลงรายงานของครู</p>')+'</div>';
+
+  h+='<div class="card"><div class="sec">ผลรายสาระการเรียนรู้</div>';
+  st.forEach(s=>{
+    h+='<div style="margin-bottom:11px"><div style="font-weight:700;font-size:15.5px;margin-bottom:4px">ด่าน '+s.L.id+' · '+esc(s.L.name)+' — '+s.c+'/'+s.n+' ข้อ</div>'+
+       '<div class="sb"><i style="width:'+Math.max(s.p,9)+'%;background:linear-gradient(90deg,'+s.L.c+','+s.L.d+')">'+s.p+'%</i></div></div>';
+  });
+  if(weak.length) h+='<div class="hintbox" style="margin-top:6px"><b>ควรทบทวนเพิ่มเติม :</b> '+weak.map(w=>esc(w.L.name)).join(' · ')+'</div>';
+  h+='</div>';
+
+  h+='<div class="card"><div class="sec">ทบทวนรายข้อ</div>';
+  rec.items.forEach((x,i)=>{
+    h+='<div class="rv '+(x.ok?'k':'x')+'"><b>'+(x.ok?'ถูก':'ผิด')+' · ข้อ '+(i+1)+'</b> <span class="note">(ด่าน '+x.level+' · '+x.sec+' วินาที'+(x.hint?' · ใช้คำใบ้':'')+(x.typed?' · พิมพ์เอง':'')+')</span><br>'+
+      (x.story?'<span class="note">'+esc(x.story)+'</span><br>':'')+esc(x.q)+'<br>'+
+      '<span style="color:'+(x.ok?'#0d7d61':'#b31f36')+'">ตอบ : '+esc(x.user)+'</span>'+(x.ok?'':' · <span style="color:#0d7d61">เฉลย : '+esc(x.correct)+'</span>')+
+      '<div class="note" style="margin-top:3px">'+esc(x.why)+'</div></div>';
+  });
+  h+='</div>';
+
+  h+='<div class="card tight" style="text-align:center">'+
+    (rec.mode==='pre'?'<button class="btn g" onclick="startTest(\'post\')">ไปทำแบบทดสอบหลังเรียน</button>':'')+
+    '<button class="btn" onclick="startTest(\''+rec.mode+'\')">ทำชุดนี้อีกครั้ง</button>'+
+    '<button class="btn p" onclick="openTeacher()">หน้าสรุปของครู</button>'+
+    '<button class="btn ghost" onclick="show(\'scr-home\')">หน้าแรก</button></div>';
+  $('resBody').innerHTML=h;
+}
+
+/* ---- teacher ---- */
+function openTeacher(){ renderTeacher(); show('scr-teacher'); }
+function renderTeacher(filter){
+  const all=records().filter(r=>r.mode!=='practice');
+  const f=filter||'all';
+  const list=f==='all'?all:all.filter(r=>r.mode===f);
+  const avg=a=>a.length?Math.round(a.reduce((s,x)=>s+x,0)/a.length):0;
+  const pre=all.filter(r=>r.mode==='pre'), post=all.filter(r=>r.mode==='post');
+  const key=r=>r.name+'|'+r.room;
+  const latest={}; all.forEach(r=>{const k=key(r)+'|'+r.mode; if(!latest[k]||r.id>latest[k].id) latest[k]=r;});
+  const people=[...new Set(all.map(key))];
+
+  let h='<div class="card"><div class="sec">หน้าสรุปคะแนนสำหรับครู</div>'+
+    '<div class="note">ข้อมูลถูกเก็บไว้ในเบราว์เซอร์ของเครื่องนี้เท่านั้น แนะนำให้ส่งออกไฟล์ CSV เพื่อเก็บถาวร</div>'+
+    '<div style="margin-top:10px">'+
+    '<button class="btn sm '+(f==='all'?'':'ghost')+'" onclick="renderTeacher(\'all\')">ทั้งหมด ('+all.length+')</button>'+
+    '<button class="btn sm '+(f==='pre'?'':'ghost')+'" onclick="renderTeacher(\'pre\')">ก่อนเรียน ('+pre.length+')</button>'+
+    '<button class="btn sm '+(f==='post'?'':'ghost')+'" onclick="renderTeacher(\'post\')">หลังเรียน ('+post.length+')</button>'+
+    '<button class="btn sm b" onclick="exportCSV()">ส่งออก CSV</button>'+
+    '<button class="btn sm y" onclick="window.print()">พิมพ์รายงาน</button>'+
+    '<button class="btn sm ghost" onclick="clearAll()">ล้างข้อมูล</button>'+
+    '<button class="btn sm ghost" onclick="show(\'scr-home\')">หน้าแรก</button></div></div>';
+
+  h+='<div class="card"><div class="sec">ภาพรวมชั้นเรียน</div><div class="grid2">'+
+    '<div class="card tight" style="margin:0;text-align:center"><div class="note">ค่าเฉลี่ยก่อนเรียน</div><div style="font-size:34px;font-weight:800;color:#1b47a8">'+avg(pre.map(r=>r.pct))+'%</div><div class="note">'+pre.length+' ครั้ง</div></div>'+
+    '<div class="card tight" style="margin:0;text-align:center"><div class="note">ค่าเฉลี่ยหลังเรียน</div><div style="font-size:34px;font-weight:800;color:#0d7d61">'+avg(post.map(r=>r.pct))+'%</div><div class="note">'+post.length+' ครั้ง</div></div>'+
+    '<div class="card tight" style="margin:0;text-align:center"><div class="note">ความก้าวหน้าเฉลี่ย</div><div style="font-size:34px;font-weight:800;color:#c25d00">'+(avg(post.map(r=>r.pct))-avg(pre.map(r=>r.pct))>=0?'+':'')+(avg(post.map(r=>r.pct))-avg(pre.map(r=>r.pct)))+'%</div><div class="note">หลังเรียน ลบ ก่อนเรียน</div></div>'+
+    '<div class="card tight" style="margin:0;text-align:center"><div class="note">ผ่านเกณฑ์ '+CONFIG.passPercent+'% (หลังเรียน)</div><div style="font-size:34px;font-weight:800;color:#6a2fc0">'+post.filter(r=>r.pct>=CONFIG.passPercent).length+'/'+post.length+'</div><div class="note">นับทุกครั้งที่ทำ</div></div>'+
+    '</div></div>';
+
+  if(all.length){
+    h+='<div class="card"><div class="sec">ค่าเฉลี่ยรายสาระของชั้นเรียน (%)</div><div class="tw"><table><tr><th class="l">สาระการเรียนรู้</th><th>ก่อนเรียน</th><th>หลังเรียน</th><th>ก้าวหน้า</th></tr>';
+    LEVELS.forEach(L=>{
+      const g=a=>{const v=a.map(r=>{const it=r.items.filter(x=>x.level===L.id);return it.length?it.filter(x=>x.ok).length/it.length*100:null;}).filter(x=>x!==null);return avg(v);};
+      const a=g(pre), b=g(post);
+      h+='<tr><td class="l">ด่าน '+L.id+' · '+esc(L.name)+'</td><td>'+a+'%</td><td>'+b+'%</td><td style="color:'+(b-a>=0?'#0d7d61':'#b31f36')+';font-weight:800">'+(b-a>=0?'+':'')+(b-a)+'</td></tr>';
+    });
+    h+='</table></div></div>';
+
+    h+='<div class="card"><div class="sec">เปรียบเทียบรายบุคคล (ใช้ผลครั้งล่าสุดของแต่ละคน)</div><div class="tw"><table>'+
+      '<tr><th>ที่</th><th class="l">ชื่อ-สกุล</th><th>ชั้น/ห้อง</th><th>เลขที่</th><th>ก่อนเรียน</th><th>หลังเรียน</th><th>ก้าวหน้า</th><th>สถานะ</th></tr>';
+    people.forEach((p,i)=>{
+      const a=latest[p+'|pre'], b=latest[p+'|post'], nm=p.split('|');
+      const pa=a?a.pct:null, pb=b?b.pct:null;
+      const gain=(pa!==null&&pb!==null)?pb-pa:null;
+      h+='<tr><td>'+(i+1)+'</td><td class="l">'+esc(nm[0])+'</td><td>'+esc(nm[1]||'-')+'</td><td>'+esc((a||b).no||'-')+'</td>'+
+        '<td>'+(pa!==null?a.correct+'/'+a.total+' ('+pa+'%)':'-')+'</td>'+
+        '<td>'+(pb!==null?b.correct+'/'+b.total+' ('+pb+'%)':'-')+'</td>'+
+        '<td style="font-weight:800;color:'+(gain===null?'#777':gain>=0?'#0d7d61':'#b31f36')+'">'+(gain===null?'-':(gain>=0?'+':'')+gain+'%')+'</td>'+
+        '<td>'+(pb===null?'<span class="badge" style="background:#9aa5bb">ยังไม่ทำหลังเรียน</span>':(pb>=CONFIG.passPercent?'<span class="badge" style="background:#17b890">ผ่าน</span>':'<span class="badge" style="background:#ef4b63">ควรซ่อมเสริม</span>'))+'</td></tr>';
+    });
+    h+='</table></div></div>';
+  }
+
+  h+='<div class="card"><div class="sec">รายการผลสอบทั้งหมด <span class="note">(กดปุ่มดูเพื่อแสดงผลรายข้อ)</span></div>';
+  if(!list.length) h+='<p class="note">ยังไม่มีข้อมูล ให้ผู้เรียนทำแบบทดสอบก่อนเรียนหรือหลังเรียนก่อน</p>';
+  else{
+    h+='<div class="tw"><table><tr><th>วันที่-เวลา</th><th class="l">ชื่อ-สกุล</th><th>ห้อง</th><th>เลขที่</th><th>ชุด</th><th>คะแนน</th><th>%</th><th>เวลา</th><th>ดู</th></tr>';
+    list.slice().reverse().forEach(r=>{
+      h+='<tr><td>'+esc(r.date)+'</td><td class="l">'+esc(r.name)+'</td><td>'+esc(r.room||'-')+'</td><td>'+esc(r.no||'-')+'</td>'+
+        '<td><span class="badge" style="background:'+(r.mode==='pre'?'#2f6fed':'#17b890')+'">'+(r.mode==='pre'?'ก่อนเรียน':'หลังเรียน')+'</span></td>'+
+        '<td><b>'+r.correct+'/'+r.total+'</b></td><td>'+r.pct+'%</td><td>'+mmss(r.secs)+'</td>'+
+        '<td><button class="btn sm" style="margin:0" onclick="detail('+r.id+')">ดู</button></td></tr>';
+    });
+    h+='</table></div>';
+  }
+  h+='</div>';
+  $('tcBody').innerHTML=h;
+}
+function detail(id){
+  const r=records().find(x=>x.id===id); if(!r) return;
+  const st=strandStat(r.items);
+  let h='<div style="text-align:left;max-height:72vh;overflow:auto">'+
+    '<h2 style="font-size:20px">'+esc(r.name)+' · '+(r.mode==='pre'?'ก่อนเรียน':'หลังเรียน')+'</h2>'+
+    '<p class="note">'+esc(r.room||'')+' เลขที่ '+esc(r.no||'-')+' · '+esc(r.date)+' · ใช้เวลา '+mmss(r.secs)+'</p>'+
+    '<p style="font-weight:800;font-size:18px">คะแนน '+r.correct+'/'+r.total+' ('+r.pct+'%)</p><div class="tw"><table><tr><th>ด่าน</th><th class="l">สาระ</th><th>ถูก</th><th>%</th></tr>';
+  st.forEach(s=>{h+='<tr><td>'+s.L.id+'</td><td class="l">'+esc(s.L.name)+'</td><td>'+s.c+'/'+s.n+'</td><td>'+s.p+'%</td></tr>';});
+  h+='</table></div><div class="tw" style="margin-top:9px"><table><tr><th>ข้อ</th><th class="l">คำถาม</th><th class="l">ตอบ</th><th class="l">เฉลย</th><th>ผล</th><th>วินาที</th></tr>';
+  r.items.forEach((x,i)=>{h+='<tr><td>'+(i+1)+'</td><td class="l" style="min-width:210px">'+esc(x.q)+'</td><td class="l">'+esc(x.user)+'</td><td class="l">'+esc(x.correct)+'</td><td>'+(x.ok?'ถูก':'ผิด')+'</td><td>'+x.sec+'</td></tr>';});
+  h+='</table></div></div><button class="btn" onclick="closeMask()">ปิด</button>';
+  $('modalBody').innerHTML=h; $('modalBody').style.maxWidth='860px'; $('mask').classList.add('on');
+}
+function exportCSV(){
+  const all=records().filter(r=>r.mode!=='practice');
+  if(!all.length){ toast('ยังไม่มีข้อมูลให้ส่งออก'); return; }
+  let rows=[['วันที่','ชื่อ-สกุล','ชั้น/ห้อง','เลขที่','ชุดทดสอบ','คะแนนที่ได้','คะแนนเต็ม','ร้อยละ','คะแนนสะสม','เวลา(วินาที)','ด่าน1','ด่าน2','ด่าน3','ด่าน4']];
+  all.forEach(r=>{
+    const s=strandStat(r.items);
+    rows.push([r.date,r.name,r.room,r.no,(r.mode==='pre'?'ก่อนเรียน':'หลังเรียน'),r.correct,r.total,r.pct,r.points,r.secs,
+      s[0].c+'/'+s[0].n, s[1].c+'/'+s[1].n, s[2].c+'/'+s[2].n, s[3].c+'/'+s[3].n]);
+  });
+  const csv='\uFEFF'+rows.map(r=>r.map(c=>'"'+String(c).replace(/"/g,'""')+'"').join(',')).join('\n');
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8;'}));
+  a.download='ผลสอบ_ค่านิยม12ประการ_'+new Date().toISOString().slice(0,10)+'.csv'; a.click();
+}
+function clearAll(){
+  $('modalBody').innerHTML='<h2>ล้างข้อมูลทั้งหมด</h2><p>ผลสอบทุกรายการในเครื่องนี้จะถูกลบถาวร</p>'+
+    '<button class="btn ghost" onclick="closeMask()">ยกเลิก</button> <button class="btn" onclick="localStorage.removeItem(\''+LS+'\');closeMask();renderTeacher()">ลบเลย</button>';
+  $('mask').classList.add('on');
+}
+
+/* ---- worksheet / PDF ---- */
+function openWorksheet(){ buildSheet(); show('scr-print'); }
+function sheetItems(mode){
+  const out=[];
+  [1,2,3,4].forEach(n=>(BANK[n][mode]||[]).slice(0,CONFIG.questionCount[n]).forEach(q=>out.push(Object.assign({level:n},q))));
+  return out;
+}
+function buildSheet(){
+  const mode=$('wkSet').value, withKey=$('wkKey').value==='1', withFig=$('wkFig').value==='1', withRef=$('wkRef').value==='1';
+  const items=sheetItems(mode);
+  const title=mode==='pre'?'แบบทดสอบก่อนเรียน':'แบบทดสอบหลังเรียน';
+  let h='';
+
+  if(withRef){
+    h+='<div class="sheet"><h2>ใบความรู้ : ค่านิยมหลักของคนไทย 12 ประการ</h2>'+
+      '<div class="sub">กลุ่มสาระการเรียนรู้สังคมศึกษา ศาสนา และวัฒนธรรม · ชั้นมัธยมศึกษาตอนต้น</div>'+
+      '<p>ค่านิยมหลักของคนไทย 12 ประการ เป็นแนวทางการปลูกฝังคุณธรรม จริยธรรม และคุณลักษณะอันพึงประสงค์ เพื่อให้เด็กและเยาวชนไทยเป็นคนดี มีวินัย ภูมิใจในชาติ และอยู่ร่วมกับผู้อื่นในสังคมได้อย่างมีความสุข</p>'+
+      '<table><tr><th style="width:52px">ข้อที่</th><th class="l">ข้อความค่านิยม</th></tr>';
+    VALUES.forEach(v=>{ h+='<tr><td>'+v.n+'</td><td style="text-align:left">'+esc(v.t)+'</td></tr>'; });
+    h+='</table><p style="margin-top:10px;font-size:14px"><b>แนวทางการนำไปใช้ในชีวิตประจำวัน</b> เช่น เคารพธงชาติและปฏิบัติตนตามหลักศาสนา (ข้อ 1) ไม่ทุจริตในการสอบ (ข้อ 2) ช่วยงานพ่อแม่และเคารพครู (ข้อ 3) ค้นคว้าความรู้เพิ่มเติมด้วยตนเอง (ข้อ 4) ไหว้และใช้ภาษาไทยให้ถูกต้อง (ข้อ 5) แบ่งปันและช่วยเหลือผู้อื่น (ข้อ 6) รับฟังความเห็นต่างและเคารพเสียงข้างมาก (ข้อ 7) เข้าแถวและปฏิบัติตามกฎจราจร (ข้อ 8) ยั้งคิดก่อนทำและก่อนแชร์ข้อมูล (ข้อ 9) ใช้จ่ายพอประมาณและเก็บออม (ข้อ 10) ออกกำลังกายและปฏิเสธสิ่งเสพติด (ข้อ 11) ดูแลสมบัติส่วนรวมและอาสาช่วยงานสังคม (ข้อ 12)</p></div>';
+  }
+
+  h+='<div class="sheet'+(withRef?' pagebreak':'')+'">'+
+    '<h2>'+title+' เรื่อง ค่านิยมหลักของคนไทย 12 ประการ</h2>'+
+    '<div class="sub">กลุ่มสาระการเรียนรู้สังคมศึกษา ศาสนา และวัฒนธรรม · ชั้นมัธยมศึกษาตอนต้น · จำนวน '+items.length+' ข้อ · '+items.length+' คะแนน</div>'+
+    '<div class="idbox">ชื่อ-สกุล ....................................................... ชั้น ............. เลขที่ ......... วันที่ ............................ คะแนนที่ได้ ......... / '+items.length+'</div>'+
+    '<p><b>คำชี้แจง</b> แบบทดสอบเป็นแบบปรนัย 4 ตัวเลือก จำนวน '+items.length+' ข้อ ข้อละ 1 คะแนน ให้นักเรียนเลือกคำตอบที่ถูกต้องที่สุดเพียงคำตอบเดียว แล้วทำเครื่องหมายกากบาท (X) ลงในกระดาษคำตอบ (ใช้เวลา 40 นาที)</p>'+
+    '<p style="font-size:14px"><b>โครงสร้างข้อสอบ</b> ข้อ 1-10 ความรู้เรื่องค่านิยม 12 ประการ · ข้อ 11-15 คุณสมบัติของผู้มีค่านิยม · ข้อ 16-20 การจำแนกพฤติกรรม · ข้อ 21-25 การนำไปใช้ในชีวิตประจำวัน</p><hr>'+
+    '<ol class="items">';
+  items.forEach(q=>{
+    h+='<li>'+(q.story?'<div class="st">สถานการณ์ : '+esc(q.story)+'</div>':'')+esc(q.q);
+    if(withFig && q.fig) h+='<div style="text-align:center;margin:4px 0">'+q.fig+'</div>';
+    h+='<div class="ops">';
+    q.choices.forEach((c,i)=>{ h+='<div>'+KEYS[i]+'. '+esc(c)+'</div>'; });
+    h+='</div></li>';
+  });
+  h+='</ol></div>';
+
+  h+='<div class="sheet pagebreak"><h2>กระดาษคำตอบ · '+title+' เรื่อง ค่านิยมหลักของคนไทย 12 ประการ</h2>'+
+    '<div class="idbox">ชื่อ-สกุล ....................................................... ชั้น ............. เลขที่ ......... วันที่ ............................</div>'+
+    '<p style="font-size:14px">คำชี้แจง ทำเครื่องหมายกากบาท (X) ทับตัวอักษรหน้าคำตอบที่ถูกต้องที่สุดเพียงคำตอบเดียว</p><div class="ansgrid">';
+  items.forEach((q,i)=>{ h+='<div>'+(i+1)+'. &nbsp; ก &nbsp; ข &nbsp; ค &nbsp; ง</div>'; });
+  h+='</div><p style="margin-top:16px;font-size:14px">คะแนนที่ได้ ............ / '+items.length+' &nbsp;&nbsp; คิดเป็นร้อยละ ............ &nbsp;&nbsp; ผลการประเมิน &nbsp; ( ) ผ่าน &nbsp; ( ) ควรซ่อมเสริม &nbsp;&nbsp; ลงชื่อผู้ตรวจ ................................</p></div>';
+
+  if(withKey){
+    h+='<div class="sheet pagebreak"><h2>เฉลยและคำอธิบาย · '+title+'</h2>'+
+      '<div class="sub">สำหรับครูผู้สอน (ไม่ควรแจกนักเรียนก่อนการทดสอบ)</div>'+
+      '<table style="margin-bottom:12px"><tr><th>ข้อ</th><th>เฉลย</th><th>ข้อ</th><th>เฉลย</th><th>ข้อ</th><th>เฉลย</th><th>ข้อ</th><th>เฉลย</th><th>ข้อ</th><th>เฉลย</th></tr>';
+    for(let r=0;r<Math.ceil(items.length/5);r++){
+      h+='<tr>';
+      for(let c=0;c<5;c++){ const k=r*5+c; h+= k<items.length?('<td>'+(k+1)+'</td><td><b>'+KEYS[items[k].answer]+'</b></td>'):'<td></td><td></td>'; }
+      h+='</tr>';
+    }
+    h+='</table><p><b>ตารางวิเคราะห์ข้อสอบตามสาระการเรียนรู้</b></p><table><tr><th>ด่าน</th><th class="l">สาระการเรียนรู้</th><th>ข้อที่</th><th>จำนวน</th></tr>';
+    let start=1;
+    LEVELS.forEach(L=>{
+      const n=CONFIG.questionCount[L.id]||0;
+      h+='<tr><td>'+L.id+'</td><td style="text-align:left">'+esc(L.name)+'</td><td>'+start+'-'+(start+n-1)+'</td><td>'+n+'</td></tr>';
+      start+=n;
+    });
+    h+='</table><p style="margin-top:12px"><b>คำอธิบายรายข้อ</b></p><ol class="items">';
+    items.forEach(q=>{ h+='<li><b>ตอบ '+KEYS[q.answer]+'. '+esc(q.choices[q.answer])+'</b><br><span style="font-size:14.5px">'+esc(q.why)+'</span></li>'; });
+    h+='</ol></div>';
+  }
+  $('sheetWrap').innerHTML=h;
+}
+
+/* ---- init ---- */
+$('tglType').classList.toggle('on',typedPref);
+</script>
+</body>
+</html>
